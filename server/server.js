@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const { verifyDocument } = require('./controllers/kycController');
-const { chatWithAI, getLogs } = require('./controllers/aiController');
+const { chatWithAI } = require('./controllers/aiController');
 const { login, verifyOTP, getDocuments } = require('./controllers/digilockerController');
 
 const app = express();
@@ -37,6 +37,10 @@ app.post('/api/cibil/score', getCibilScore);
 const { updateUserProfile, getUserProfile } = require('./controllers/userController');
 app.post('/api/user/update', updateUserProfile);
 app.get('/api/user/profile', getUserProfile);
+
+// Dev Console Routes
+const { getLogs } = require('./utils/logger');
+app.get('/api/dev/logs', (req, res) => res.json(getLogs()));
 
 app.listen(PORT, () => {
     console.log(`[Swifty Backend] Running on http://localhost:${PORT}`);

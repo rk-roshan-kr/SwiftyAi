@@ -156,7 +156,7 @@ const ProfilePage = () => {
         phone: localStorage.getItem('user_mobile') || "+91 98765 43210",
         role: "Power User",
         joinDate: "Aug 2023",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Swifty"
+        avatar: "https://api.dicebear.com/9.x/bottts/svg?seed=Felix"
     });
 
     const [isEditing, setIsEditing] = useState(false);

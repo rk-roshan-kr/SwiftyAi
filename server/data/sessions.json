@@ -950,5 +950,43 @@
       "negotiationStatus": "NEGOTIATING"
     },
     "history": []
+  },
+  "1765974747594": {
+    "activeAgent": "InvestmentAgent",
+    "lastActiveTime": 1765974838818,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "FD",
+      "invAmount": 20000,
+      "invTenure": null,
+      "invGoal": null,
+      "invStep": "DISCOVERY"
+    },
+    "history": []
+  },
+  "1765979131547": {
+    "activeAgent": "SanctionAgent",
+    "lastActiveTime": 1765979253883,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 50000,
+      "currentOfferedRate": 12,
+      "requestedTenure": 36,
+      "collateral": null,
+      "agreedRate": 12,
+      "applicationId": "PL-604759",
+      "negotiationRounds": 0,
+      "floorHitCount": 0,
+      "negotiationStatus": "LOCKED",
+      "kycStep": "COMPLETED",
+      "digiLockerLinked": true,
+      "userName": "Mahesh Kumar",
+      "bankLinked": true,
+      "underwritingStep": "COMPLETED",
+      "verifiedIncome": 23000,
+      "sanctionStep": "LETTER_ISSUED"
+    },
+    "history": []
   }
 }

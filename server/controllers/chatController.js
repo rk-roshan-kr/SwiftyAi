@@ -81,6 +81,15 @@ const sendMessage = async (req, res) => {
         // (MasterAgent inside run() handles ALL MongoDB saving now)
         const result = await MasterAgent.run(message, context);
 
+        // [DEV LOGGING]
+        const { addLog } = require('../utils/logger');
+        addLog({
+            status: 'SUCCESS',
+            userMessage: message,
+            rawOutput: result.response || "Multi-message response",
+            parsedOutput: result
+        });
+
         // 3. Send Response
         // We pass 'messages' array for the UI to render bubbles.
         // We set 'response' to null to prevent the frontend from rendering a "Ghost Bubble" via legacy fallback.

@@ -1,25 +1,21 @@
-// In-Memory Log Store for Dev Console
-let memoryLogs = [];
+// Simple In-Memory Logger for Dev Console
+const logs = [];
+const MAX_LOGS = 50;
 
-const logEvent = (type, details) => {
-    const log = {
-        id: Date.now() + Math.random(),
+const addLog = (entry) => {
+    const logItem = {
+        id: Date.now().toString() + Math.random(),
         timestamp: new Date(),
-        status: (type === 'ERROR') ? 'ERROR' : 'SUCCESS',
-        userMessage: details.userMessage || details.message || "System Event",
-        rawOutput: details.rawOutput || details.response || "",
-        parsedOutput: details.parsedOutput || details.data || {},
-        type
+        status: entry.status || 'SUCCESS',
+        userMessage: entry.userMessage || '',
+        rawOutput: entry.rawOutput || '',
+        parsedOutput: entry.parsedOutput || {}
     };
 
-    // Check for duplicates (simple debouncing)
-    const last = memoryLogs[0];
-    if (last && last.type === log.type && last.timestamp.getTime() === log.timestamp.getTime()) return;
-
-    memoryLogs.unshift(log);
-    if (memoryLogs.length > 50) memoryLogs.pop();
+    logs.unshift(logItem); // Add to top
+    if (logs.length > MAX_LOGS) logs.pop();
 };
 
-const getLogs = () => memoryLogs;
+const getLogs = () => logs;
 
-module.exports = { logEvent, getLogs };
+module.exports = { addLog, getLogs };
