@@ -1,0 +1,38 @@
+=== CATALOG START ===
+
+[CATEGORY: ACCOUNTS
+]
+SCHEMA: ID | Name | Type | Rate | MinBal | Eligibility | Features | Pitch
+acc_sav_001|Swifty Lite Savings|SAVINGS|3.5%|1000|Residents>18|Zero Maint, Free UPI, Virtual Card|Hassle-free starter account
+acc_sav_002|Salary Elite Account|SAVINGS|4.0%|0|Salaried(>30k)|Zero Bal, Lounge(2/qtr),
+50L Ins|Premium lifestyle benefits
+acc_sav_003|Senior First Savings|SAVINGS|5.5%|5000|Age>60|Doorstep Banking, Priority Svc|Respect & higher returns for seniors
+acc_chk_001|BizFlow Current|CHECKING|0%|25k|SME/Proprietor|Unltd Cash Dep(5L), Free NEFT/RTGS|Unlimited digital txns for business
+acc_chk_002|Merchant Plus|CHECKING|0%|1L|Retailers|Free POS, OD(2L), Daily Cash Pickup|For heavy cash flow & instant credit
+
+[CATEGORY: LOANS
+]
+SCHEMA: ID | Name | Type | Rate | MinRate | Tenure | MaxAmt | Eligibility | Features | Pitch
+ln_auto_new_001|Velocity Drive (New)|SECURED|8.50%|8.00%|84m|50L|CIBIL>750,New Car|100% On-Road,
+0 Foreclosure(>2yr)|Lowest rate,
+100% funding
+ln_auto_used_002|Pre-Owned Drive|SECURED|11.50%|11.00%|60m|20L|Car<7yr|Quick Val,
+80% Funding|Certified pre-owned flexible plans
+ln_pers_003|Flexi-Cash Personal|UNSECURED|12.00%|10.50%|60m|25L|Inc>25k,CIBIL>700|30min Disbursal, No Collateral|Instant funds, no assets pledged
+ln_home_004|DreamNest Home|SECURED|8.35%|8.15%|360m|10Cr|Salaried/SelfEmp|30Yr Tenure, Top-up Avail|Own home, EMI ₹750/Lakh
+ln_edu_005|FutureFirst Edu|SECURED|9.50%|9.00%|180m|50L|Premier Inst.|Moratorium(Course+1yr), 80E Benefit|Pay after you get a job
+ln_gold_006|SecureGold|SECURED|7.50%|7.00%|24m|1Cr|Gold Ornaments|Instant Cash, Bullet Repayment|Unlock gold value instantly
+ln_bike_007|MotoZip 2-Wheeler|SECURED|9.00%|8.50%|48m|5L|Age>21|5min Approval, Min Downpayment|Ride out with easy EMIs
+
+[CATEGORY: INVESTMENTS
+]
+SCHEMA: ID | Name | Type | Rate | LockIn | Risk | Features | Pitch
+inv_fd_001|SteadyGrowth FD|INVESTMENT|7.10%|1-10yr|Low|Guaranteed Returns, +0.5% Senior|Safety first, guaranteed growth
+inv_rd_002|Monthly Saver RD|INVESTMENT|6.80%|Min 6m|Low|Start ₹500/mo, Auto-debit|Build corpus slowly
+inv_tax_003|TaxShield FD|INVESTMENT|7.25%|5yr|Low|80C Tax Ded, Compound Int|Save tax & grow wealth
+inv_mf_debt_004|BlueChip Liquid|MUTUAL_FUND|~5-6%|None|Low-Med|Withdraw T+1, Better than Sav|Park cash short-term
+inv_mf_eq_005|Alpha Aggressive|MUTUAL_FUND|~12-15%|None|High|High Growth, Diversified Eq|Beat inflation long-term
+inv_ppf_006|PPF|GOVT_SCHEME|7.10%|15yr|Zero|Tax Free Mat, Sov Guarantee|Long-term tax-free retirement
+inv_sgb_007|Sovereign Gold Bond|GOVT_SCHEME|2.5%+Gold|8yr|Med|No Making Chg, Interest on Gold|Smartest way to own gold
+
+=== CATALOG END ===

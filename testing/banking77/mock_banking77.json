@@ -1,0 +1,52 @@
+[
+    {
+        "text": "I lost my card, what should I do?",
+        "category": "card_lost",
+        "expected_intent": "BLOCK_CARD"
+    },
+    {
+        "text": "My transfer to John failed",
+        "category": "transfer_failed",
+        "expected_intent": "CHECK_TRANSACTION"
+    },
+    {
+        "text": "What is the exchange rate for USD?",
+        "category": "exchange_rate",
+        "expected_intent": "CHECK_RATE"
+    },
+    {
+        "text": "I want to open a new account",
+        "category": "account_opening",
+        "expected_intent": "NEW_APPLICATION"
+    },
+    {
+        "text": "Why was I charged a fee?",
+        "category": "fees_charged",
+        "expected_intent": "CHECK_FEES"
+    },
+    {
+        "text": "I need a loan for a car",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "Can I get a personal loan?",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "Change my PIN please",
+        "category": "pin_change",
+        "expected_intent": "CHANGE_PIN"
+    },
+    {
+        "text": "My verified address is wrong",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "How do I upgrade my card?",
+        "category": "card_upgrade",
+        "expected_intent": "SALES_AGENT"
+    }
+]

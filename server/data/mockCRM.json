@@ -1,0 +1,290 @@
+[
+    {
+        "accountId": "ACC999001",
+        "customerId": "CUST001",
+        "type": "Savings",
+        "balance": 125000.50,
+        "cardLast4": "8812",
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-15",
+                "desc": "Salary Credit",
+                "amount": 85000,
+                "type": "CREDIT"
+            },
+            {
+                "date": "2023-12-10",
+                "desc": "UPI Payment - Swiggy",
+                "amount": 450,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-12-05",
+                "desc": "Rent Transfer",
+                "amount": 25000,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-12-01",
+                "desc": "Netflix Subscription",
+                "amount": 649,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-11-28",
+                "desc": "Interest Credit",
+                "amount": 1205,
+                "type": "CREDIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC777003",
+        "customerId": "CUST003",
+        "type": "Savings",
+        "balance": 15000.00,
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-15",
+                "desc": "Salary Credit",
+                "amount": 45000,
+                "type": "CREDIT"
+            },
+            {
+                "date": "2023-12-14",
+                "desc": "Credit Card Bill Pay",
+                "amount": 30000,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-12-10",
+                "desc": "Movies",
+                "amount": 800,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-12-05",
+                "desc": "Metro Card Recharge",
+                "amount": 500,
+                "type": "DEBIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC666004",
+        "customerId": "CUST004",
+        "type": "Savings - Premium",
+        "balance": 850000.00,
+        "cardLast4": "4121",
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-15",
+                "desc": "Salary Credit",
+                "amount": 200000,
+                "type": "CREDIT"
+            },
+            {
+                "date": "2023-12-12",
+                "desc": "SIP Investment",
+                "amount": 50000,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-12-01",
+                "desc": "Club Membership",
+                "amount": 15000,
+                "type": "DEBIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC555005",
+        "customerId": "CUST005",
+        "type": "Savings",
+        "balance": 8500.00,
+        "cardLast4": "4153",
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-15",
+                "desc": "Salary Credit",
+                "amount": 60000,
+                "type": "CREDIT"
+            },
+            {
+                "date": "2023-12-14",
+                "desc": "Personal Loan EMI",
+                "amount": 45000,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-12-10",
+                "desc": "Grocery",
+                "amount": 2000,
+                "type": "DEBIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC444006",
+        "customerId": "CUST006",
+        "type": "Savings",
+        "balance": 1200.00,
+        "cardLast4": "4653",
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-15",
+                "desc": "Salary Credit",
+                "amount": 35000,
+                "type": "CREDIT"
+            },
+            {
+                "date": "2023-12-15",
+                "desc": "Loan EMI Auto-Debit",
+                "amount": 15000,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-12-10",
+                "desc": "Rent",
+                "amount": 12000,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-12-05",
+                "desc": "UPI - Tea Stall",
+                "amount": 20,
+                "type": "DEBIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC333007",
+        "customerId": "CUST007",
+        "type": "Current - Business",
+        "balance": 1250000.00,
+        "cardLast4": "4752",
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-15",
+                "desc": "Invoice #992 Payment",
+                "amount": 500000,
+                "type": "CREDIT"
+            },
+            {
+                "date": "2023-12-10",
+                "desc": "Staff Salaries",
+                "amount": 250000,
+                "type": "DEBIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC222008",
+        "customerId": "CUST008",
+        "type": "Savings",
+        "balance": 500.00,
+        "cardLast4": "4902",
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-01",
+                "desc": "Cheque Bounce Charge",
+                "amount": 500,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-11-30",
+                "desc": "Salary",
+                "amount": 75000,
+                "type": "CREDIT"
+            },
+            {
+                "date": "2023-11-30",
+                "desc": "Loan EMI",
+                "amount": 40000,
+                "type": "DEBIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC111009",
+        "customerId": "CUST009",
+        "type": "Savings",
+        "balance": 25000.00,
+        "cardLast4": "8952",
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-15",
+                "desc": "Salary",
+                "amount": 55000,
+                "type": "CREDIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC101010",
+        "customerId": "CUST010",
+        "type": "Wealth Management Account",
+        "balance": 15000000.00,
+        "cardLast4": "5912",
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-15",
+                "desc": "Dividend Payout",
+                "amount": 450000,
+                "type": "CREDIT"
+            },
+            {
+                "date": "2023-12-10",
+                "desc": "Offshore Transfer",
+                "amount": 1000000,
+                "type": "DEBIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC987011",
+        "customerId": "CUST011",
+        "type": "Savings - Pension",
+        "balance": 350000.00,
+        "cardLast4": "7212",
+        "currency": "INR",
+        "recentTransactions": [
+            {
+                "date": "2023-12-01",
+                "desc": "Govt Pension Credit",
+                "amount": 40000,
+                "type": "CREDIT"
+            },
+            {
+                "date": "2023-12-10",
+                "desc": "Pharmacy",
+                "amount": 1200,
+                "type": "DEBIT"
+            },
+            {
+                "date": "2023-12-05",
+                "desc": "Grandson Gift",
+                "amount": 5000,
+                "type": "DEBIT"
+            }
+        ]
+    },
+    {
+        "accountId": "ACC000000",
+        "customerId": "GUEST",
+        "type": "Wallet",
+        "balance": 0.00,
+        "cardLast4": "0000",
+        "currency": "INR",
+        "recentTransactions": []
+    }
+]

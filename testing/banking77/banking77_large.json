@@ -1,0 +1,252 @@
+[
+    {
+        "text": "I lost my card, what should I do?",
+        "category": "card_lost",
+        "expected_intent": "BLOCK_CARD"
+    },
+    {
+        "text": "My card was stolen yesterday",
+        "category": "card_lost",
+        "expected_intent": "BLOCK_CARD"
+    },
+    {
+        "text": "I cannot find my debit card",
+        "category": "card_lost",
+        "expected_intent": "BLOCK_CARD"
+    },
+    {
+        "text": "Is there a way to deactivate my lost card?",
+        "category": "card_lost",
+        "expected_intent": "BLOCK_CARD"
+    },
+    {
+        "text": "Someone stole my wallet with my card in it",
+        "category": "card_lost",
+        "expected_intent": "BLOCK_CARD"
+    },
+    {
+        "text": "My transfer to John failed",
+        "category": "transfer_failed",
+        "expected_intent": "CHECK_TRANSACTION"
+    },
+    {
+        "text": "Why didn't my payment go through?",
+        "category": "transfer_failed",
+        "expected_intent": "CHECK_TRANSACTION"
+    },
+    {
+        "text": "I sent money but it bounced back",
+        "category": "transfer_failed",
+        "expected_intent": "CHECK_TRANSACTION"
+    },
+    {
+        "text": "Transaction declined at Starbucks",
+        "category": "transfer_failed",
+        "expected_intent": "CHECK_TRANSACTION"
+    },
+    {
+        "text": "I can't send money to my mom",
+        "category": "transfer_failed",
+        "expected_intent": "CHECK_TRANSACTION"
+    },
+    {
+        "text": "What is the exchange rate for USD?",
+        "category": "exchange_rate",
+        "expected_intent": "CHECK_RATE"
+    },
+    {
+        "text": "How many Euros can I get for 1000 Pounds?",
+        "category": "exchange_rate",
+        "expected_intent": "CHECK_RATE"
+    },
+    {
+        "text": "Current rate for JPY?",
+        "category": "exchange_rate",
+        "expected_intent": "CHECK_RATE"
+    },
+    {
+        "text": "Is the dollar rate good today?",
+        "category": "exchange_rate",
+        "expected_intent": "CHECK_RATE"
+    },
+    {
+        "text": "Exchange rates list please",
+        "category": "exchange_rate",
+        "expected_intent": "CHECK_RATE"
+    },
+    {
+        "text": "I need a loan for a car",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "Can I get a personal loan?",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "I want to borrow 50000",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "Do you offer home loans?",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "Apply for credit",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "I need money for emergency",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "Loan eligibility check",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "Interest rates for personal loan",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "Fast loan options",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "I want to buy a bike on EMI",
+        "category": "loan_application",
+        "expected_intent": "SALES_AGENT"
+    },
+    {
+        "text": "Change my PIN please",
+        "category": "pin_change",
+        "expected_intent": "CHANGE_PIN"
+    },
+    {
+        "text": "I forgot my pin code",
+        "category": "pin_change",
+        "expected_intent": "CHANGE_PIN"
+    },
+    {
+        "text": "Reset my password",
+        "category": "pin_change",
+        "expected_intent": "CHANGE_PIN"
+    },
+    {
+        "text": "New PIN request",
+        "category": "pin_change",
+        "expected_intent": "CHANGE_PIN"
+    },
+    {
+        "text": "Update security code",
+        "category": "pin_change",
+        "expected_intent": "CHANGE_PIN"
+    },
+    {
+        "text": "My verified address is wrong",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "Update my home address",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "I moved to a new city",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "KYC verification failed",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "Check my documents status",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "Verify my identity",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "Upload aadhaar card",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "Address proof rejected",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "When will my KYC be done?",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "Change mobile number in profile",
+        "category": "kyc_update",
+        "expected_intent": "VERIFICATION_AGENT"
+    },
+    {
+        "text": "I want to open a new account",
+        "category": "account_opening",
+        "expected_intent": "NEW_APPLICATION"
+    },
+    {
+        "text": "Start a savings account",
+        "category": "account_opening",
+        "expected_intent": "NEW_APPLICATION"
+    },
+    {
+        "text": "New bank account for student",
+        "category": "account_opening",
+        "expected_intent": "NEW_APPLICATION"
+    },
+    {
+        "text": "Business account opening",
+        "category": "account_opening",
+        "expected_intent": "NEW_APPLICATION"
+    },
+    {
+        "text": "Join your bank",
+        "category": "account_opening",
+        "expected_intent": "NEW_APPLICATION"
+    },
+    {
+        "text": "Why was I charged a fee?",
+        "category": "fees_charged",
+        "expected_intent": "CHECK_FEES"
+    },
+    {
+        "text": "Explain this deduction",
+        "category": "fees_charged",
+        "expected_intent": "CHECK_FEES"
+    },
+    {
+        "text": "Hidden charges on my account",
+        "category": "fees_charged",
+        "expected_intent": "CHECK_FEES"
+    },
+    {
+        "text": "Refund my service fee",
+        "category": "fees_charged",
+        "expected_intent": "CHECK_FEES"
+    },
+    {
+        "text": "Unknown transaction fee",
+        "category": "fees_charged",
+        "expected_intent": "CHECK_FEES"
+    }
+]

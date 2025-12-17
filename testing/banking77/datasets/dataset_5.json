@@ -1,0 +1,352 @@
+[
+  {
+    "id": "5-1",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Transfer to Mom failed",
+    "follow_up": "Try again please"
+  },
+  {
+    "id": "5-2",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Why did my transaction fail?",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "5-3",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Aadhaar",
+    "follow_up": "Will my account work?"
+  },
+  {
+    "id": "5-4",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Start Student banking",
+    "follow_up": "Is checkbook free?"
+  },
+  {
+    "id": "5-5",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "I need a loan for business",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "5-6",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Update my Aadhaar",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "5-7",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "New Current for my son",
+    "follow_up": "Interest rate?"
+  },
+  {
+    "id": "5-8",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Open Salary account",
+    "follow_up": "Do I get a debit card?"
+  },
+  {
+    "id": "5-9",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for vacation loan",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "5-10",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Passport",
+    "follow_up": " How long will it take?"
+  },
+  {
+    "id": "5-11",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "I need a loan for business",
+    "follow_up": "What are the documents needed?"
+  },
+  {
+    "id": "5-12",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Money didn't reach Mom",
+    "follow_up": "Is the receiver valid?"
+  },
+  {
+    "id": "5-13",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Error sending 1000 Euros",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "5-14",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Error sending rent",
+    "follow_up": "Try again please"
+  },
+  {
+    "id": "5-15",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Transfer to Landlord failed",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "5-16",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Interest rate for home loan?",
+    "follow_up": "Is the rate fixed?"
+  },
+  {
+    "id": "5-17",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Can't find my Travel Card",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "5-18",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "New Current for my son",
+    "follow_up": "Online banking included?"
+  },
+  {
+    "id": "5-19",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Voter ID",
+    "follow_up": "Is online upload enough?"
+  },
+  {
+    "id": "5-20",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Visa",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "5-21",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Passport",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "5-22",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Payment of 10k didn't go through",
+    "follow_up": "Try again please"
+  },
+  {
+    "id": "5-23",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "My Credit Card is missing",
+    "follow_up": "Can I still use the app?"
+  },
+  {
+    "id": "5-24",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Why did my transaction fail?",
+    "follow_up": "Check my balance"
+  },
+  {
+    "id": "5-25",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Can I borrow 50 bucks?",
+    "follow_up": "Can I prepay?"
+  },
+  {
+    "id": "5-26",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Upload new Driving License",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "5-27",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for car loan",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "5-28",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Do you give loans for wedding?",
+    "follow_up": "Is the rate fixed?"
+  },
+  {
+    "id": "5-29",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Block my Debit Card",
+    "follow_up": "Can I still use the app?"
+  },
+  {
+    "id": "5-30",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Passport",
+    "follow_up": "Will my account work?"
+  },
+  {
+    "id": "5-31",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Open Savings account",
+    "follow_up": "Interest rate?"
+  },
+  {
+    "id": "5-32",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Start Savings banking",
+    "follow_up": "Online banking included?"
+  },
+  {
+    "id": "5-33",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in PAN Card",
+    "follow_up": "Is online upload enough?"
+  },
+  {
+    "id": "5-34",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Why did my transaction fail?",
+    "follow_up": "Try again please"
+  },
+  {
+    "id": "5-35",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Start Student banking",
+    "follow_up": "Online banking included?"
+  },
+  {
+    "id": "5-36",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Start Salary banking",
+    "follow_up": "Interest rate?"
+  },
+  {
+    "id": "5-37",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Interest rate for home loan?",
+    "follow_up": "What are the documents needed?"
+  },
+  {
+    "id": "5-38",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Do you give loans for home?",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "5-39",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Visa",
+    "follow_up": "Will my Apple Pay stop working?"
+  },
+  {
+    "id": "5-40",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Voter ID",
+    "follow_up": "Is online upload enough?"
+  },
+  {
+    "id": "5-41",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Block my Travel Card",
+    "follow_up": "Can I still use the app?"
+  },
+  {
+    "id": "5-42",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Payment of 1000 Euros didn't go through",
+    "follow_up": "Try again please"
+  },
+  {
+    "id": "5-43",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Join with Joint",
+    "follow_up": "Is checkbook free?"
+  },
+  {
+    "id": "5-44",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Join with Student",
+    "follow_up": "What is minimum balance?"
+  },
+  {
+    "id": "5-45",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "New Savings for my son",
+    "follow_up": "What is minimum balance?"
+  },
+  {
+    "id": "5-46",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Driving License is expired",
+    "follow_up": " How long will it take?"
+  },
+  {
+    "id": "5-47",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Can I borrow rent?",
+    "follow_up": "Is the rate fixed?"
+  },
+  {
+    "id": "5-48",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Someone stole my Credit Card",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "5-49",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for business loan",
+    "follow_up": "Can I prepay?"
+  },
+  {
+    "id": "5-50",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Aadhaar is expired",
+    "follow_up": "Check status"
+  }
+]

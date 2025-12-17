@@ -1,0 +1,352 @@
+[
+  {
+    "id": "9-1",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Can I borrow rent?",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "9-2",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Travel Card",
+    "follow_up": "Did any transactions go through?"
+  },
+  {
+    "id": "9-3",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "I want a new Savings",
+    "follow_up": "What is minimum balance?"
+  },
+  {
+    "id": "9-4",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "I want a new Joint",
+    "follow_up": "Online banking included?"
+  },
+  {
+    "id": "9-5",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Someone stole my Credit Card",
+    "follow_up": "Can I still use the app?"
+  },
+  {
+    "id": "9-6",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Start Joint banking",
+    "follow_up": "Is checkbook free?"
+  },
+  {
+    "id": "9-7",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Upload new Passport",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "9-8",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Upload new Aadhaar",
+    "follow_up": "Will my account work?"
+  },
+  {
+    "id": "9-9",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in PAN Card",
+    "follow_up": "Do I need to visit branch?"
+  },
+  {
+    "id": "9-10",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Can I borrow 10k?",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "9-11",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Debit Card",
+    "follow_up": "Will my Apple Pay stop working?"
+  },
+  {
+    "id": "9-12",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Interest rate for home loan?",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "9-13",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Why did my transaction fail?",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "9-14",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "I need a loan for car",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "9-15",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Platinum Card",
+    "follow_up": "Can I still use the app?"
+  },
+  {
+    "id": "9-16",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Open Salary account",
+    "follow_up": "Interest rate?"
+  },
+  {
+    "id": "9-17",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Upload new Voter ID",
+    "follow_up": "Is online upload enough?"
+  },
+  {
+    "id": "9-18",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for car loan",
+    "follow_up": "What is the processing fee?"
+  },
+  {
+    "id": "9-19",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Interest rate for vacation loan?",
+    "follow_up": "Can I prepay?"
+  },
+  {
+    "id": "9-20",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Money didn't reach John",
+    "follow_up": "Check my balance"
+  },
+  {
+    "id": "9-21",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Passport is expired",
+    "follow_up": " How long will it take?"
+  },
+  {
+    "id": "9-22",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for home loan",
+    "follow_up": "Is the rate fixed?"
+  },
+  {
+    "id": "9-23",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Do you give loans for business?",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "9-24",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Money didn't reach John",
+    "follow_up": "Is the receiver valid?"
+  },
+  {
+    "id": "9-25",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Visa",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "9-26",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "My Visa is missing",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "9-27",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Can I borrow rent?",
+    "follow_up": "What are the documents needed?"
+  },
+  {
+    "id": "9-28",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Credit Card",
+    "follow_up": "Is there a fee?"
+  },
+  {
+    "id": "9-29",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Do you give loans for home?",
+    "follow_up": "What are the documents needed?"
+  },
+  {
+    "id": "9-30",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Upload new Passport",
+    "follow_up": " How long will it take?"
+  },
+  {
+    "id": "9-31",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Driving License",
+    "follow_up": " How long will it take?"
+  },
+  {
+    "id": "9-32",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Block my Travel Card",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "9-33",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Payment of 1000 Euros didn't go through",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "9-34",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Transfer to Amazon failed",
+    "follow_up": "Is the receiver valid?"
+  },
+  {
+    "id": "9-35",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Money didn't reach John",
+    "follow_up": "Check my balance"
+  },
+  {
+    "id": "9-36",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for wedding loan",
+    "follow_up": "What is the processing fee?"
+  },
+  {
+    "id": "9-37",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Transfer to Uber failed",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "9-38",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Voter ID",
+    "follow_up": "Is online upload enough?"
+  },
+  {
+    "id": "9-39",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Transfer to Uber failed",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "9-40",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Error sending rent",
+    "follow_up": "When will I get a refund?"
+  },
+  {
+    "id": "9-41",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Why did my transaction fail?",
+    "follow_up": "Try again please"
+  },
+  {
+    "id": "9-42",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Interest rate for wedding loan?",
+    "follow_up": "What are the documents needed?"
+  },
+  {
+    "id": "9-43",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for business loan",
+    "follow_up": "What is the processing fee?"
+  },
+  {
+    "id": "9-44",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "I need a loan for car",
+    "follow_up": "What is the processing fee?"
+  },
+  {
+    "id": "9-45",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "New Salary for my son",
+    "follow_up": "What is minimum balance?"
+  },
+  {
+    "id": "9-46",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Block my Visa",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "9-47",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Visa",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "9-48",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Transfer to Uber failed",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "9-49",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Error sending rent",
+    "follow_up": "Is the receiver valid?"
+  },
+  {
+    "id": "9-50",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Open Student account",
+    "follow_up": "Is checkbook free?"
+  }
+]

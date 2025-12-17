@@ -1,0 +1,954 @@
+{
+  "1765887920750": {
+    "step": "NEGOTIATING",
+    "activeAgent": null,
+    "customerId": "CUST011",
+    "data": {
+      "name": "Mahesh Kumar",
+      "id": "CUST011",
+      "mobile": "9876543210",
+      "email": "mahesh@example.com",
+      "city": "Jaipur",
+      "age": 62,
+      "monthlySalary": 40000,
+      "currentEMIs": 0,
+      "kycVerified": true,
+      "pan": "MAHES1234T",
+      "balance": 350000
+    },
+    "history": [
+      "User: Check my balance",
+      "Bot: ||AGENT:SupportAgent||Let me check that for you.",
+      "User: okay",
+      "Bot: ||AGENT:SupportAgent||I can help you check your **Balance** or view **Recent Transactions**. What would you like to do?",
+      "User: my balance",
+      "Bot: ||AGENT:MasterAgent||Your Savings - Pension Account (..7011) Balance is:\n**₹3,50,000**",
+      "User: can you tell me my credit score",
+      "Bot: ||AGENT:SupportAgent||Transferring you to Support...",
+      "User: acually transfer me ",
+      "Bot: ||AGENT:SupportAgent||I can help you check your **Balance** or view **Recent Transactions**. What would you like to do?",
+      "User: can you tell me my credit score",
+      "Bot: ||AGENT:SupportAgent||I can help you check your **Balance** or view **Recent Transactions**. What would you like to do?",
+      "User: recnet trasanctions",
+      "Bot: ||AGENT:SupportAgent||I can help you check your **Balance** or view **Recent Transactions**. What would you like to do?",
+      "User: Recent Transactions",
+      "Bot: ||AGENT:MasterAgent||Here are your last 5 transactions:\n\n🟢 2023-12-01: ₹40,000 - Govt Pension Credit\n🔴 2023-12-10: ₹1,200 - Pharmacy\n🔴 2023-12-05: ₹5,000 - Grandson Gift"
+    ]
+  },
+  "1765888291034": {
+    "step": "NEGOTIATING",
+    "activeAgent": null,
+    "customerId": "CUST011",
+    "data": {
+      "name": "Mahesh Kumar",
+      "id": "CUST011",
+      "mobile": "9876543210",
+      "email": "mahesh@example.com",
+      "city": "Jaipur",
+      "age": 62,
+      "monthlySalary": 40000,
+      "currentEMIs": 0,
+      "kycVerified": true,
+      "pan": "MAHES1234T",
+      "balance": 350000
+    },
+    "history": [
+      "User: Check my balance",
+      "Bot: ||AGENT:SupportAgent||Let me check that for you.",
+      "User: Check My balance",
+      "Bot: ||AGENT:SupportAgent||Your Savings - Pension Account (..7011) Balance is:\n**₹3,50,000**"
+    ]
+  },
+  "1765889213872": {
+    "step": "NEGOTIATING",
+    "activeAgent": "SalesAgent",
+    "customerId": "CUST011",
+    "data": {
+      "name": "Mahesh Kumar",
+      "id": "CUST011",
+      "mobile": "9876543210",
+      "email": "mahesh@example.com",
+      "city": "Jaipur",
+      "age": 62,
+      "monthlySalary": 40000,
+      "currentEMIs": 0,
+      "kycVerified": true,
+      "pan": "MAHES1234T",
+      "amount": 0,
+      "productType": "HOME"
+    },
+    "history": [
+      "User: I need a personal loan",
+      "Bot: ||AGENT:SalesAgent||Transferring you to Sales...",
+      "User: okay",
+      "Bot: ||AGENT:SalesAgent||It seems like you're ready to get started. Before we begin, I just want to confirm that you're looking for some general guidance on managing your finances as a retired individual with a steady income of ₹40,000 per month.\n\nCan you tell me more about what's on your mind? Are you looking to save for retirement, pay off any outstanding debts, or perhaps explore investment options?",
+      "User: Yes im looking for a perosnal laon of 20000 i need this to do something with my  house reapering ",
+      "Bot: ||AGENT:SalesAgent||I see you earn approx ₹40,000. Is this correct?\n\nFor a personal loan of ₹20,000, we can offer a competitive rate. However, I want to make sure I provide the best option for your specific needs.\n\nCan you please tell me what you plan to use the ₹20,000 loan for? Is it for home renovation or something else? ||FILTER:HOME||",
+      "User: house renovation ",
+      "Bot: ||AGENT:SalesAgent||Renovation plans, exciting!\n\nTo get started, can you tell me more about your home renovation project? What's the approximate budget for this project?\n\n||WIDGET:PRODUCT_LIST|| ||FILTER:HOME||",
+      "User: I want the Flexi-Cash Personal",
+      "Bot: ||AGENT:SalesAgent||For a ₹25L loan, we can offer 12.00% interest rate with 30min disbursal time and no collateral required.\n\nHere are our best Flexi-Cash Personal loan options for you:\n\n||WIDGET:PRODUCT_LIST||\nWould you like to know more about this product or explore other options? ||FILTER:PERSONAL||",
+      "User: i want 20000 in but offer me better interest rate dude",
+      "Bot: ||AGENT:SalesAgent||I see you earn approx ₹40,000/mo. Is this correct?\n\nAlso, I understand you're looking for a loan of ₹20,000, but you'd like to explore options that might offer a better interest rate. Can you tell me what you plan to use the loan for? ||FILTER:PERSONAL||",
+      "User: i told YOu its for a house renovation ",
+      "Bot: ||AGENT:SalesAgent||I see you earn approx ₹40,000/mo. Is this correct?\n\nAlso, since you're looking to renovate a house, I'm assuming you're considering a secured home loan? Would you like me to explore options for a secured home loan with a tenure of around 30 years, given your income and credit score? ||FILTER:HOME||",
+      "User: im retired and i only need money for renovaatins not a new house why you suggesting me a house loan with 30 year emi ",
+      "Bot: ||AGENT:SalesAgent||I see you earn approx ₹40,000/mo. Is this correct?\n\nLet's focus on your renovation needs then. Since you're looking to renovate and don't need a new home, I'd like to explore other options that might be more suitable for your requirements.\n\nHere are our best home loan options for renovations:\n\n||WIDGET:PRODUCT_LIST||\nWould you like me to walk you through these options or help you narrow down the choices based on your specific needs? ||FILTER:HOME||"
+    ]
+  },
+  "1765889773732": {
+    "step": "NEGOTIATING",
+    "activeAgent": "SalesAgent",
+    "customerId": "CUST011",
+    "data": {
+      "name": "Mahesh Kumar",
+      "id": "CUST011",
+      "mobile": "9876543210",
+      "email": "mahesh@example.com",
+      "city": "Jaipur",
+      "age": 62,
+      "monthlySalary": 40000,
+      "currentEMIs": 0,
+      "kycVerified": true,
+      "pan": "MAHES1234T",
+      "amount": 0,
+      "productType": "PERSONAL"
+    },
+    "history": [
+      "User: i need a personal loan of rs 20k",
+      "Bot: ||AGENT:SalesAgent||_Transferring you to Sales..._\n\nFor a ₹20,000 personal loan, we have some options available. Here are our best offers for you:\n\n||WIDGET:PRODUCT_LIST||\n \nWould you like me to explain the features and interest rates of these options? Or would you like to explore other possibilities? ||FILTER:PERSONAL||",
+      "User: I want the Flexi-Cash Personal",
+      "Bot: ||AGENT:SalesAgent||For a ₹25L loan with Flexi-Cash Personal, we can offer 12.00% interest rate. That works out to about ₹2,083/month.\n\nHere are our best Flexi-Cash Personal options for you:\n\n||WIDGET:PRODUCT_LIST||\n \nIs this amount and product suitable for your needs? ||FILTER:PERSONAL||",
+      "User: i want 11%",
+      "Bot: ||AGENT:SalesAgent||For an interest rate of 11%, I'd like to clarify that our current offer is 12%. However, I can check with my manager to see if we can accommodate your request.\n\nHere are our best personal loan options for you:\n\n||WIDGET:PRODUCT_LIST||\nWould you like me to explore any specific features or eligibility criteria for these options? ||FILTER:PERSONAL||",
+      "User: can we do 11%?",
+      "Bot: ||AGENT:SalesAgent||For a ₹5L personal loan, our best offer is 10.50%. We can discuss possible options, but I'd like to clarify if you're looking for something slightly higher.\n\nWould you be open to considering a rate of 10.75%, which would put your monthly payment at approximately ₹9k? ||FILTER:PERSONAL||",
+      "User: no if i can get 20k for 10.5% that would be great",
+      "Bot: ||AGENT:SalesAgent||For a ₹20,000 loan at 10.5%, your monthly installment would be approximately ₹1,900.\n\nHere are our best personal loan options for you:\n\n||WIDGET:PRODUCT_LIST||\nWould you like to explore these options further or is there anything else I can help you with? ||FILTER:PERSONAL||",
+      "User: No lets proceed with this one im happy wiht this",
+      "Bot: ||AGENT:SalesAgent||For a ₹40,000 monthly pension income, you have a clean credit record with no active loans. That's great!\n\nConsidering your verified income, I'd like to discuss some options for managing your finances effectively.\n\nBefore we dive into loan suggestions, can you tell me what you're looking to achieve with this loan? Are you planning a big purchase, consolidating debt, or simply having some extra funds for emergencies? ||FILTER:PERSONAL||",
+      "User: yea just the house renovation ",
+      "Bot: ||AGENT:SalesAgent||For a ₹50,000 personal need, I'd like to clarify a few details. Can you tell me what's the purpose of this loan? Is it for a specific project or a general financial assistance? ||FILTER:PERSONAL||",
+      "User: i told you its house renovation",
+      "Bot: ||AGENT:SalesAgent||I apologize for missing that earlier. Since you've mentioned it's a house renovation, I'll make sure to tailor my advice accordingly.\n\nFor a ₹40,000 monthly pensioner like yourself, taking out a personal loan for house renovation can be a good option. Considering your verified income and clean credit record, we have some options available.\n\nHere are our best personal loan options for you:\n\n||WIDGET:PRODUCT_LIST||\nWould you like to explore these options further or would you like me to suggest something else? ||FILTER:PERSONAL||",
+      "User: we chose the loan option at 10.5% let go ahead with paper work",
+      "Bot: ||AGENT:SalesAgent||I'd be happy to help you with the paperwork.\n\nTo get started, I'll need some personal documents from you. Could you please provide me with:\n\n1. **Identification Proof**: A valid government-issued ID (e.g., PAN card, Aadhaar card, or driver's license)\n2. **Address Proof**: A utility bill or bank statement showing your current address\n3. **Income Documents**: Recent 6-months' salary slips and a proof of income (e.g., pension slip)\n\nPlease ensure these documents are up-to-date and signed.\n\nAlso, I'll need to verify some details with you:\n\n* Are there any other loan accounts that we should be aware of?\n* Do you have any existing credit cards or other debts?\n\nOnce I receive these documents, I can guide you through the next steps. ||FILTER:PERSONAL||",
+      "User: i already connected my digilocker",
+      "Bot: ||AGENT:SalesAgent||You've connected your Digilocker, which means we can verify your income details. Your verified income is ₹40,000 per month from the Government of India pension. Is that correct? ||FILTER:PERSONAL||",
+      "User: YEs",
+      "Bot: ||AGENT:SalesAgent||It seems like you're ready to move forward. Can you please tell me, what's your financial goal for this personal loan? Are you looking to cover some unexpected expenses or perhaps finance a specific project? ||FILTER:PERSONAL||",
+      "User: i told you bro its for house renovation",
+      "Bot: ||AGENT:SalesAgent||For a ₹5L house renovation, we can offer a Personal Loan with a competitive rate. The current base rate is 12%. \n\nHere are our best personal loan options for you:\n\n||WIDGET:PRODUCT_LIST||\nWould you like to know more about these options or explore other possibilities? ||FILTER:PERSONAL||"
+    ]
+  },
+  "1765892848876": {
+    "step": "NEGOTIATING",
+    "activeAgent": null,
+    "customerId": "CUST011",
+    "data": {
+      "name": "Mahesh Kumar",
+      "id": "CUST011",
+      "mobile": "9876543210",
+      "email": "mahesh@example.com",
+      "city": "Jaipur",
+      "age": 62,
+      "monthlySalary": 40000,
+      "currentEMIs": 0,
+      "kycVerified": true,
+      "pan": "MAHES1234T",
+      "balance": 350000
+    },
+    "history": [
+      "User: Check my balance",
+      "Bot: ||AGENT:SupportAgent||_Let me check that for you._\n\nYour Savings - Pension Account (..7011) Balance is:\n**₹3,50,000**",
+      "User: Check my balance",
+      "Bot: ||AGENT:SupportAgent||_Let me check that for you._\n\nYour Savings - Pension Account (..7011) Balance is:\n**₹3,50,000**"
+    ]
+  },
+  "1765896796276": {
+    "step": "NEGOTIATING",
+    "activeAgent": "SalesAgent",
+    "customerId": "CUST011",
+    "data": {
+      "name": "Mahesh Kumar",
+      "id": "CUST011",
+      "mobile": "9876543210",
+      "email": "mahesh@example.com",
+      "city": "Jaipur",
+      "age": 62,
+      "monthlySalary": 40000,
+      "currentEMIs": 0,
+      "kycVerified": true,
+      "pan": "MAHES1234T",
+      "balance": 350000,
+      "amount": 0,
+      "productType": "CAR"
+    },
+    "history": [
+      "User: Check my balance",
+      "Bot: ||AGENT:SupportAgent||_||WIDGET:CLOSE||Let me check that for you._\n\nYour Savings - Pension Account (..7011) Balance is:\n**₹3,50,000**",
+      "User: i want a loan",
+      "Bot: ||AGENT:SalesAgent||_Transferring you to Sales..._\n\nFor a 5L car loan, we can offer 8.5%. That works out to about ₹10k/month.\n\nWould you like me to show you our best car loan options for you? ||WIDGET:PRODUCT_LIST||",
+      "User: i didnt said anything about car",
+      "Bot: ||AGENT:SalesAgent||I seem to have made an incorrect assumption. Can you please tell me what kind of loan or financial product you are interested in? What is the purpose of this loan, and how much do you need? ||FILTER:CAR||",
+      "User: education loan",
+      "Bot: ||AGENT:SalesAgent||It seems like you're considering an education loan. Can you tell me more about what's on your mind? What's the purpose of this loan, and how much are you looking to borrow? ||FILTER:CAR||",
+      "User: im retired so i thought use this time to complete my 40 year old left degree",
+      "Bot: ||AGENT:SalesAgent||It's great that you're taking proactive steps to pursue your passion for education. Completing your degree at 40 can be a fulfilling experience, and it's wonderful that you have the financial stability to support yourself during this journey.\n\nAs you consider financing your educational pursuits, I'd like to explore some options with you. Since you're retired, we'll focus on finding a loan that suits your needs and provides a comfortable repayment schedule.\n\nCan you tell me more about your desired tenure for the loan? Are you looking to complete your degree within a specific timeframe, say 2-3 years? ||FILTER:CAR||",
+      "User: 2 year and its going to cost about 4lakhs ruppes",
+      "Bot: ||AGENT:SalesAgent||For a 2-year car loan of ₹400,000, we can discuss some options. Here are our best car loan options for you:\n\n||WIDGET:PRODUCT_LIST||\n \nWhat would you like to know next? The interest rate, tenure, or perhaps the EMI amount? ||FILTER:CAR||",
+      "User: i am talking about education loan why are you selling car loan",
+      "Bot: ||AGENT:SalesAgent||I seem to have made an incorrect assumption. Let's get back on track.\n\nFor your education loan, I'd like to start by verifying your reported income. Since you're a retired government employee with a pension of ₹40,000 per month, I'll assume that's accurate.\n\nCan you please tell me what is the requested amount for the education loan? And what is the purpose of the loan - is it for yourself or your child/children? ||FILTER:CAR||",
+      "User: its 4 lakh and its for my self",
+      "Bot: ||AGENT:SalesAgent||For a ₹4 lakh personal loan, we can offer competitive interest rates. Our current base rate is 12%. However, I'd like to discuss some options with you.\n\nHere are our best personal loan options for you:\n\n||WIDGET:PRODUCT_LIST||\nWould you like me to explain each option in more detail? ||FILTER:CAR||",
+      "User: it says 10.50% on the card",
+      "Bot: ||AGENT:SalesAgent||For a ₹5L car loan, we can offer 8.5%. That works out to about ₹10k/month. Would you like me to explore other options or confirm this rate? ||FILTER:CAR||"
+    ]
+  },
+  "1765898169865": {
+    "step": "NEGOTIATING",
+    "activeAgent": "SalesAgent",
+    "customerId": "CUST011",
+    "data": {
+      "name": "Mahesh Kumar",
+      "id": "CUST011",
+      "mobile": "9876543210",
+      "email": "mahesh@example.com",
+      "city": "Jaipur",
+      "age": 62,
+      "monthlySalary": 40000,
+      "currentEMIs": 0,
+      "kycVerified": true,
+      "pan": "MAHES1234T"
+    },
+    "history": [
+      "User: I need a personal loan"
+    ]
+  },
+  "1765873395294": {
+    "step": "START",
+    "activeAgent": null,
+    "customerId": "GUEST",
+    "data": {
+      "name": "Guest",
+      "mobile": "9334098565"
+    },
+    "history": []
+  },
+  "1765901124772": {
+    "step": "NEGOTIATING",
+    "activeAgent": "SalesAgent",
+    "customerId": "GUEST",
+    "data": {
+      "name": "Guest",
+      "mobile": "9334098565",
+      "amount": 0,
+      "productType": "PERSONAL"
+    },
+    "history": [
+      "User: I need a personal loan",
+      "Bot: ||AGENT:MasterAgent||Transferring you to Sales...||SPLIT||||AGENT:SalesAgent||For a 5L car loan, we can offer 8.5%. That works out to about ₹10k/month.\n\nHere are our best car loan options for you: ||WIDGET:PRODUCT_LIST|| ||FILTER:PERSONAL||",
+      "User: I want the Flexi-Cash Personal",
+      "Bot: ||AGENT:SalesAgent||For a 25L loan, our best offer is ₹30L with an interest rate of 12.00% and a tenure of 60 months.\n\nHere are our best car loan options for you:\n\n||WIDGET:PRODUCT_LIST||\n \nWould you like to explore these options further or would you like me to explain the features in more detail? ||FILTER:PERSONAL||"
+    ]
+  },
+  "1765901594423": {
+    "step": "NEGOTIATING",
+    "activeAgent": "SalesAgent",
+    "customerId": "CUST011",
+    "data": {
+      "name": "Mahesh Kumar",
+      "id": "CUST011",
+      "mobile": "9876543210",
+      "email": "mahesh@example.com",
+      "city": "Jaipur",
+      "age": 62,
+      "monthlySalary": 40000,
+      "currentEMIs": 0,
+      "kycVerified": true,
+      "pan": "MAHES1234T",
+      "amount": 0,
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "agreedRate": null
+    },
+    "history": [
+      "User: I need a personal loan",
+      "Bot: ||AGENT:MasterAgent||Transferring you to Sales...||SPLIT||||AGENT:SalesAgent||For a 5L car loan, we can offer 8.5%. That works out to about ₹10k/month.\n\n||WIDGET:PRODUCT_LIST|| ||FILTER:PERSONAL||",
+      "User: I want the Velocity Drive (New)",
+      "User: I want the DreamNest Home",
+      "User: I want the Flexi-Cash Personal",
+      "Bot: ||AGENT:SalesAgent||For a 5L car loan, we can offer 8.5%. That works out to about ₹10k/month.\n\nHere are our best car loan options for you:\n\n% On-Road,\nQuick Val ||FILTER:CAR||",
+      "Bot: ||AGENT:SalesAgent||For a ₹10Cr home loan with the DreamNest Home, here are our best options:\n\nHere are our best car loan options for you: ||WIDGET:PRODUCT_LIST|| ||FILTER:HOME||",
+      "Bot: ||AGENT:SalesAgent||For a 25L personal loan, our best offer is ₹0 with an interest rate of 12.00%. Here are our best car loan options for you: ||WIDGET:PRODUCT_LIST|| ||FILTER:PERSONAL||",
+      "Bot: ||AGENT:SalesAgent||System Policy: We're currently offering a special discount of 12% on our Flexi-Cash Personal Loan. This amount is only available for a limited time, so act fast! Would you like to proceed with the loan? ||FILTER:PERSONAL||"
+    ]
+  },
+  "1765903666942": {
+    "step": "START",
+    "activeAgent": "SalesAgent",
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 11.5,
+      "negotiationRounds": 1,
+      "negotiationStatus": "NEGOTIATING",
+      "agreedRate": null
+    },
+    "history": [
+      "Bot: ||AGENT:SalesAgent||System Policy: We're currently offering a special promotion of 12% interest rate on our Flexi-Cash Personal Loan. This is an exclusive deal, and we're not able to negotiate further. Would you like to proceed with the loan? ||FILTER:PERSONAL||",
+      "Bot: ||AGENT:SalesAgent||System Policy dictates a preferred customer discount of 0.5%. I can apply this to your loan, making the offer 11.5%. Would you like to proceed? ||FILTER:PERSONAL||"
+    ]
+  },
+  "1765903769209": {
+    "step": "START",
+    "activeAgent": "SalesAgent",
+    "data": {
+      "mobile": "9876543210"
+    },
+    "history": [
+      "Bot: ||AGENT:SalesAgent||We have tailored options for your needs. You can choose from Personal, Car, or Home loans. Which one would you like to explore? ||WIDGET:PRODUCT_LIST||",
+      "Bot: ||AGENT:SalesAgent||We have tailored options for your needs. You can choose from Personal, Car, or Home loans. Which one would you like to explore? ||WIDGET:PRODUCT_LIST||"
+    ]
+  },
+  "1765903806917": {
+    "step": "START",
+    "activeAgent": "SalesAgent",
+    "data": {
+      "mobile": "9876543210"
+    },
+    "history": [
+      "Bot: ||AGENT:SalesAgent||We have tailored options for your needs. You can choose from Personal, Car, or Home loans. Which one would you like to explore? ||WIDGET:PRODUCT_LIST||"
+    ]
+  },
+  "1765907226790": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765907261073,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "agreedRate": null
+    },
+    "history": [
+      "User: I need a personal loan",
+      "Bot: ||AGENT:SalesAgent||I am experiencing high traffic. Please try again. ||FILTER:PERSONAL||",
+      "User: you are a offline agent dude",
+      "Bot: ||AGENT:SalesAgent||I am experiencing high traffic. Please try again. ||FILTER:PERSONAL||"
+    ]
+  },
+  "1765907456889": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765907458316,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "agreedRate": null
+    },
+    "history": [
+      "User: I need a personal loan",
+      "Bot: ||AGENT:SalesAgent||I am experiencing high traffic. Please try again. ||FILTER:PERSONAL||"
+    ]
+  },
+  "1765907661150": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765907664109,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "agreedRate": null
+    },
+    "history": [
+      "User: I need a personal loan",
+      "Bot: ||AGENT:SalesAgent||I've checked our current rates and I can offer you an attractive deal on our Flexi-Cash Personal Loan.\n\n**Rate:** 12.00%\n**Amount:** We're still finalizing the amount, but we'll get back to you soon.\n**Tenure:** Up to 60 months\n**Eligibility:** You have a steady income and a good credit score.\n\nThe best rate approved for your profile is 12.00%. Would you like me to proceed with the application? ||FILTER:PERSONAL||"
+    ]
+  },
+  "1765908284045": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765908288623,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": [
+      "User: I need a personal loan",
+      "Bot: Sure, let me transfer you to a Loan Specialist who can help with that. 📞\n\n||AGENT:SalesAgent||I can certainly help you with a Personal Loan 🤔. How much funds do you require?"
+    ]
+  },
+  "1765908551672": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765908553512,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765908670158": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765908671749,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765909759490": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765909764603,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765909939275": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765909940395,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765909947467": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765909951987,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "CAR",
+      "requestedAmount": null,
+      "currentOfferedRate": 9.5,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765909976599": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765909981365,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "CAR",
+      "requestedAmount": null,
+      "currentOfferedRate": 9.5,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765910426249": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765910428872,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765910895255": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765910898732,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765911200445": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765911201773,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765911260182": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765911261304,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationRounds": 1
+    },
+    "history": []
+  },
+  "1765911968229": {
+    "activeAgent": "SanctionAgent",
+    "lastActiveTime": 1765912229063,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 1000000,
+      "currentOfferedRate": 11.5,
+      "negotiationStatus": "LOCKED",
+      "negotiationRounds": 6,
+      "kycStep": "COMPLETED",
+      "fetchedName": "Mahesh Kumar",
+      "isVerified": true,
+      "name": "Mahesh Kumar",
+      "underwritingStep": "COMPLETED",
+      "creditScore": 780,
+      "sanctionStep": "WAITING_CONFIRMATION"
+    },
+    "history": []
+  },
+  "1765912410472": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765912558764,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 20000,
+      "currentOfferedRate": 11.5,
+      "negotiationStatus": "LOCKED",
+      "negotiationRounds": 5,
+      "kycStep": "MANUAL_UPLOAD",
+      "fetchedName": "Mahesh Kumar"
+    },
+    "history": []
+  },
+  "1765912572411": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765912661056,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "CAR",
+      "requestedAmount": 900000,
+      "currentOfferedRate": 9.25,
+      "negotiationStatus": "LOCKED",
+      "negotiationRounds": 4,
+      "kycStep": "WAITING_CONFIRMATION",
+      "fetchedName": "Mahesh Kumar"
+    },
+    "history": []
+  },
+  "1765915503338": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765915507221,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "currentOfferedRate": 12,
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING"
+    },
+    "history": []
+  },
+  "1765915629858": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765915790999,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 380000,
+      "currentOfferedRate": 10.5,
+      "negotiationRounds": 2,
+      "negotiationStatus": "LOCKED",
+      "kycStep": "WAITING_CONFIRMATION",
+      "fetchedName": "Mahesh Kumar",
+      "isVerified": true,
+      "name": "Mahesh Kumar",
+      "underwritingStep": "COMPLETED",
+      "creditScore": 780,
+      "sanctionStep": "COMPLETED",
+      "sanctionDetails": {
+        "applicationId": "SBL/520512",
+        "date": "17/12/2025",
+        "applicantName": "Mahesh Kumar",
+        "loanAmount": 380000,
+        "interestRate": 12,
+        "tenureMonths": 60,
+        "monthlyEMI": 8452,
+        "processingFee": 3800,
+        "productType": "PERSONAL"
+      }
+    },
+    "history": []
+  },
+  "1765916328492": {
+    "activeAgent": null,
+    "lastActiveTime": 1765916440118,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 89000,
+      "currentOfferedRate": 10.5,
+      "negotiationRounds": 3,
+      "negotiationStatus": "NEGOTIATING",
+      "kycStep": "COMPLETED",
+      "fetchedName": "Mahesh Kumar",
+      "isVerified": true,
+      "name": "Mahesh Kumar",
+      "underwritingStep": "COMPLETED",
+      "creditScore": 780,
+      "sanctionStep": "COMPLETED",
+      "sanctionDetails": {
+        "applicationId": "SBL/241671",
+        "date": "17/12/2025",
+        "applicantName": "Mahesh Kumar",
+        "loanAmount": 89000,
+        "interestRate": 12,
+        "tenureMonths": 60,
+        "monthlyEMI": 1979,
+        "processingFee": 890,
+        "productType": "PERSONAL"
+      }
+    },
+    "history": []
+  },
+  "1765916848265": {
+    "activeAgent": "SanctionAgent",
+    "lastActiveTime": 1765917034035,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 987698,
+      "currentOfferedRate": 10.5,
+      "agreedRate": 10.5,
+      "negotiationRounds": 8,
+      "negotiationStatus": "LOCKED",
+      "kycStep": "COMPLETED",
+      "fetchedName": "Mahesh Kumar",
+      "isVerified": true,
+      "name": "Mahesh Kumar",
+      "underwritingStep": "COMPLETED",
+      "creditScore": 780,
+      "sanctionStep": "LETTER_ISSUED",
+      "sanctionDetails": {
+        "applicationId": "SBL/729252",
+        "date": "17/12/2025",
+        "applicantName": "Mahesh Kumar",
+        "loanAmount": 987698,
+        "interestRate": 10.5,
+        "tenureMonths": 60,
+        "monthlyEMI": 21229,
+        "processingFee": 9876,
+        "productType": "PERSONAL"
+      }
+    },
+    "history": []
+  },
+  "1765917534054": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765917560241,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 90000,
+      "currentOfferedRate": 12,
+      "agreedRate": null,
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING"
+    },
+    "history": []
+  },
+  "1765917658529": {
+    "activeAgent": null,
+    "lastActiveTime": 1765917795419,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 520000,
+      "currentOfferedRate": 10.5,
+      "agreedRate": 10.5,
+      "negotiationRounds": 2,
+      "negotiationStatus": "LOCKED",
+      "kycStep": "COMPLETED",
+      "fetchedName": "Mahesh Kumar",
+      "isVerified": true,
+      "name": "Mahesh Kumar",
+      "underwritingStep": "COMPLETED",
+      "creditScore": 780,
+      "sanctionStep": "COMPLETED",
+      "sanctionDetails": {
+        "applicationId": "SBL/309702",
+        "date": "17/12/2025",
+        "applicantName": "Mahesh Kumar",
+        "loanAmount": 520000,
+        "interestRate": 10.5,
+        "tenureMonths": 60,
+        "monthlyEMI": 11176,
+        "processingFee": 5200,
+        "productType": "PERSONAL"
+      }
+    },
+    "history": []
+  },
+  "1765918033087": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765918181318,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 1234,
+      "currentOfferedRate": 10.5,
+      "agreedRate": null,
+      "negotiationRounds": 1,
+      "negotiationStatus": "NEGOTIATING",
+      "kycStep": "WAITING_CONFIRMATION",
+      "fetchedName": "Mahesh Kumar",
+      "isVerified": true,
+      "name": "Mahesh Kumar",
+      "underwritingStep": "COMPLETED",
+      "creditScore": 780,
+      "sanctionStep": "COMPLETED",
+      "requestedTenure": 40,
+      "sanctionDetails": {
+        "applicationId": "SBL/825026",
+        "date": "17/12/2025",
+        "applicantName": "Mahesh Kumar",
+        "loanAmount": 540000,
+        "interestRate": 10.5,
+        "tenureMonths": 40,
+        "monthlyEMI": 16058,
+        "processingFee": 5400,
+        "productType": "PERSONAL"
+      }
+    },
+    "history": []
+  },
+  "1765918404203": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765918543745,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "CAR",
+      "requestedAmount": 67000,
+      "currentOfferedRate": 9.5,
+      "agreedRate": null,
+      "negotiationRounds": 3,
+      "negotiationStatus": "NEGOTIATING",
+      "kycStep": "WAITING_CONFIRMATION",
+      "fetchedName": "Mahesh Kumar",
+      "isVerified": true,
+      "name": "Mahesh Kumar",
+      "underwritingStep": "COMPLETED",
+      "creditScore": 780,
+      "sanctionStep": "COMPLETED",
+      "requestedTenure": 20,
+      "sanctionDetails": {
+        "applicationId": "SBL/333406",
+        "date": "17/12/2025",
+        "applicantName": "Mahesh Kumar",
+        "loanAmount": 67000,
+        "interestRate": 10.5,
+        "tenureMonths": 20,
+        "monthlyEMI": 3666,
+        "processingFee": 670,
+        "productType": "PERSONAL"
+      }
+    },
+    "history": []
+  },
+  "1765959897486": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765959898671,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "agreedRate": null,
+      "applicationId": "PL-302355",
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING"
+    },
+    "history": []
+  },
+  "1765959913245": {
+    "activeAgent": "SupportAgent",
+    "lastActiveTime": 1765959917461,
+    "data": {
+      "mobile": "9876543210"
+    },
+    "history": []
+  },
+  "1765959933830": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765959936138,
+    "data": {
+      "mobile": "9876543210",
+      "kycStep": "WAITING_CONFIRMATION",
+      "fetchedName": "Mahesh Kumar"
+    },
+    "history": []
+  },
+  "1765960697896": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765960810669,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "CAR",
+      "requestedAmount": 4000000,
+      "currentOfferedRate": 9.5,
+      "agreedRate": null,
+      "applicationId": "VL-645965",
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING"
+    },
+    "history": []
+  },
+  "1765960925881": {
+    "activeAgent": null,
+    "lastActiveTime": 1765961237428,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "CAR",
+      "requestedAmount": 4000000,
+      "currentOfferedRate": 75,
+      "agreedRate": null,
+      "applicationId": "VL-342939",
+      "negotiationRounds": 1,
+      "negotiationStatus": "NEGOTIATING",
+      "kycStep": "COMPLETED",
+      "digiLockerLinked": true,
+      "userName": "Mahesh Kumar",
+      "bankLinked": true,
+      "underwritingStep": "COMPLETED",
+      "creditScore": 780,
+      "sanctionStep": "COMPLETED",
+      "loanBooked": true
+    },
+    "history": []
+  },
+  "1765961246466": {
+    "activeAgent": "SupportAgent",
+    "lastActiveTime": 1765961251494,
+    "data": {
+      "mobile": "9876543210"
+    },
+    "history": []
+  },
+  "1765961386654": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765961444526,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "CAR",
+      "requestedAmount": 2000000,
+      "currentOfferedRate": 9.5,
+      "agreedRate": null,
+      "applicationId": "VL-928811",
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING"
+    },
+    "history": []
+  },
+  "1765961556043": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765961571718,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "agreedRate": null,
+      "applicationId": "PL-936135",
+      "negotiationRounds": 0,
+      "negotiationStatus": "NEGOTIATING"
+    },
+    "history": []
+  },
+  "1765962202269": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765962346433,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "HOME",
+      "requestedAmount": 9000000,
+      "currentOfferedRate": 8.75,
+      "agreedRate": null,
+      "applicationId": "HL-151371",
+      "negotiationRounds": 1,
+      "negotiationStatus": "NEGOTIATING"
+    },
+    "history": []
+  },
+  "1765963070438": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765963598048,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": 3000000,
+      "currentOfferedRate": 10.6,
+      "requestedTenure": 132,
+      "agreedRate": 10.6,
+      "applicationId": "PL-105775",
+      "negotiationRounds": 1,
+      "floorHitCount": 0,
+      "negotiationStatus": "LOCKED",
+      "kycStep": "AWAITING_DOCS"
+    },
+    "history": []
+  },
+  "1765964096958": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765964434652,
+    "data": {
+      "mobile": "9876543210",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "requestedTenure": 36,
+      "agreedRate": null,
+      "applicationId": "PL-495826",
+      "negotiationRounds": 0,
+      "floorHitCount": 0,
+      "negotiationStatus": "NEGOTIATING"
+    },
+    "history": []
+  }
+}

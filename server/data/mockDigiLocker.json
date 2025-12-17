@@ -1,0 +1,234 @@
+{
+    "users": [
+        {
+            "username": "arjun_kumar",
+            "mobile": "9999999999",
+            "pin": "123456",
+            "name": "Arjun Kumar",
+            "dob": "1995-08-15",
+            "gender": "M",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "ABCDE1234F",
+                    "name": "Arjun Kumar",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-ABCDE1234F"
+                },
+                "AADHAAR": {
+                    "docType": "AADHAAR",
+                    "docId": "1111 2222 3333",
+                    "name": "Arjun Kumar",
+                    "issuer": "UIDAI",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.uidai-111122223333"
+                }
+            }
+        },
+        {
+            "username": "priya_sharma",
+            "mobile": "8888888888",
+            "pin": "123456",
+            "name": "Priya Sharma",
+            "dob": "1998-05-20",
+            "gender": "F",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "FGHIJ5678K",
+                    "name": "Priya Sharma",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-FGHIJ5678K"
+                },
+                "AADHAAR": {
+                    "docType": "AADHAAR",
+                    "docId": "2222 3333 4444",
+                    "name": "Priya Sharma",
+                    "issuer": "UIDAI",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.uidai-222233334444"
+                }
+            }
+        },
+        {
+            "username": "rahul_verma",
+            "mobile": "7777777777",
+            "pin": "123456",
+            "name": "Rahul Verma",
+            "dob": "1992-11-10",
+            "gender": "M",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "KLMNO9012P",
+                    "name": "Rahul Verma",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-KLMNO9012P"
+                },
+                "AADHAAR": {
+                    "docType": "AADHAAR",
+                    "docId": "3333 4444 5555",
+                    "name": "Rahul Verma",
+                    "issuer": "UIDAI",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.uidai-333344445555"
+                }
+            }
+        },
+        {
+            "username": "sneha_gupta",
+            "mobile": "6666666666",
+            "pin": "123456",
+            "name": "Sneha Gupta",
+            "dob": "1980-02-14",
+            "gender": "F",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "PQRST3456L",
+                    "name": "Sneha Gupta",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-PQRST3456L"
+                },
+                "AADHAAR": {
+                    "docType": "AADHAAR",
+                    "docId": "4444 5555 6666",
+                    "name": "Sneha Gupta",
+                    "issuer": "UIDAI",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.uidai-444455556666"
+                }
+            }
+        },
+        {
+            "username": "vikram_singh",
+            "mobile": "5555555555",
+            "pin": "123456",
+            "name": "Vikram Singh",
+            "dob": "1990-07-07",
+            "gender": "M",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "UVWXY7890M",
+                    "name": "Vikram Singh",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-UVWXY7890M"
+                }
+            }
+        },
+        {
+            "username": "anjali_desai",
+            "mobile": "4444444444",
+            "pin": "123456",
+            "name": "Anjali Desai",
+            "dob": "1996-09-25",
+            "gender": "F",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "ZABCD1234N",
+                    "name": "Anjali Desai",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-ZABCD1234N"
+                }
+            }
+        },
+        {
+            "username": "rohan_mehta",
+            "mobile": "3333333333",
+            "pin": "123456",
+            "name": "Rohan Mehta",
+            "dob": "1985-03-30",
+            "gender": "M",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "EFGHI5678O",
+                    "name": "Rohan Mehta",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-EFGHI5678O"
+                }
+            }
+        },
+        {
+            "username": "kavita_reddy",
+            "mobile": "2222222222",
+            "pin": "123456",
+            "name": "Kavita Reddy",
+            "dob": "1988-12-05",
+            "gender": "F",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "JKLMN9012Q",
+                    "name": "Kavita Reddy",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-JKLMN9012Q"
+                }
+            }
+        },
+        {
+            "username": "amit_patel",
+            "mobile": "1111111111",
+            "pin": "123456",
+            "name": "Amit Patel",
+            "dob": "1994-06-18",
+            "gender": "M",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "OPQRS3456R",
+                    "name": "Amit Patel",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-OPQRS3456R"
+                }
+            }
+        },
+        {
+            "username": "neha_chopra",
+            "mobile": "1010101010",
+            "pin": "123456",
+            "name": "Neha Chopra",
+            "dob": "1982-10-10",
+            "gender": "F",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "TUVWX7890S",
+                    "name": "Neha Chopra",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-TUVWX7890S"
+                }
+            }
+        },
+        {
+            "username": "mahesh_kumar",
+            "mobile": "9876543210",
+            "pin": "123456",
+            "name": "Mahesh Kumar",
+            "dob": "1960-01-01",
+            "gender": "M",
+            "documents": {
+                "PAN": {
+                    "docType": "PAN",
+                    "docId": "MAHES1234T",
+                    "name": "Mahesh Kumar",
+                    "issuer": "Income Tax Department",
+                    "status": "VERIFIED",
+                    "uri": "in.gov.pan-MAHES1234T"
+                }
+            }
+        }
+    ]
+}

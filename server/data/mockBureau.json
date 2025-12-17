@@ -1,0 +1,315 @@
+[
+    {
+        "customerId": "CUST001",
+        "name": "Arjun Kumar",
+        "pan": "ABCDE1234F",
+        "score": 780,
+        "estimatedIncome": 85000,
+        "employmentType": "SALARIED",
+        "employer": "Tech Solutions Inc",
+        "salaryBreakdown": {
+            "basic": 45000,
+            "hra": 20000,
+            "allowances": 20000
+        },
+        "activeLoans": [
+            {
+                "type": "Personal Loan",
+                "bank": "HDFC",
+                "emi": 12000,
+                "outstanding": 150000
+            }
+        ],
+        "closedLoans": [
+            {
+                "type": "Consumer Durable",
+                "bank": "Bajaj",
+                "status": "CLOSED",
+                "closeDate": "2023-05-10"
+            }
+        ],
+        "warnings": []
+    },
+    {
+        "customerId": "CUST002",
+        "name": "Priya Sharma",
+        "pan": "FGHIJ5678K",
+        "score": 650,
+        "estimatedIncome": 120000,
+        "employmentType": "SELF_EMPLOYED",
+        "employer": "Creative Studio",
+        "salaryBreakdown": {
+            "grossReceipts": 150000,
+            "expenses": 30000
+        },
+        "activeLoans": [
+            {
+                "type": "Car Loan",
+                "bank": "SBI",
+                "emi": 15000,
+                "outstanding": 400000
+            },
+            {
+                "type": "Home Loan",
+                "bank": "ICICI",
+                "emi": 35000,
+                "outstanding": 4500000
+            }
+        ],
+        "closedLoans": [],
+        "warnings": [
+            "High Credit Utilization (>80%)"
+        ]
+    },
+    {
+        "customerId": "CUST003",
+        "name": "Rahul Verma",
+        "pan": "KLMNO9012P",
+        "score": 850,
+        "estimatedIncome": 45000,
+        "employmentType": "SALARIED",
+        "employer": "Retail Corp",
+        "salaryBreakdown": {
+            "basic": 25000,
+            "hra": 10000,
+            "allowances": 10000
+        },
+        "activeLoans": [],
+        "closedLoans": [],
+        "warnings": []
+    },
+    {
+        "customerId": "CUST004",
+        "name": "Sneha Gupta",
+        "pan": "PQRST3456L",
+        "score": 810,
+        "estimatedIncome": 200000,
+        "employmentType": "SALARIED",
+        "employer": "Global Tech Systems",
+        "salaryBreakdown": {
+            "basic": 100000,
+            "hra": 50000,
+            "allowances": 50000
+        },
+        "activeLoans": [
+            {
+                "type": "Credit Card EMI",
+                "bank": "Amex",
+                "emi": 25000,
+                "outstanding": 120000
+            }
+        ],
+        "closedLoans": [
+            {
+                "type": "Car Loan",
+                "bank": "Kotak",
+                "status": "CLOSED",
+                "closeDate": "2024-01-15"
+            }
+        ],
+        "warnings": []
+    },
+    {
+        "customerId": "CUST005",
+        "name": "Vikram Singh",
+        "pan": "UVWXY7890M",
+        "score": 720,
+        "estimatedIncome": 60000,
+        "employmentType": "SALARIED",
+        "employer": "City Services Ltd",
+        "salaryBreakdown": {
+            "basic": 30000,
+            "hra": 15000,
+            "allowances": 15000
+        },
+        "activeLoans": [
+            {
+                "type": "Two-Wheeler Loan",
+                "bank": "Hero FinCorp",
+                "emi": 3500,
+                "outstanding": 45000
+            }
+        ],
+        "closedLoans": [],
+        "warnings": [
+            "Recent enquiry for Personal Loan rejected"
+        ]
+    },
+    {
+        "customerId": "CUST006",
+        "name": "Anjali Desai",
+        "pan": "ZABCD1234N",
+        "score": 680,
+        "estimatedIncome": 35000,
+        "employmentType": "SALARIED",
+        "employer": "EduCare Foundation",
+        "salaryBreakdown": {
+            "basic": 20000,
+            "hra": 10000,
+            "allowances": 5000
+        },
+        "activeLoans": [
+            {
+                "type": "Education Loan",
+                "bank": "SBI",
+                "emi": 8000,
+                "outstanding": 300000
+            }
+        ],
+        "closedLoans": [],
+        "warnings": [
+            "1 Late Payment aimed 90 days ago"
+        ]
+    },
+    {
+        "customerId": "CUST007",
+        "name": "Rohan Mehta",
+        "pan": "EFGHI5678O",
+        "score": 790,
+        "estimatedIncome": 150000,
+        "employmentType": "SELF_EMPLOYED",
+        "employer": "Mehta Consultants",
+        "salaryBreakdown": {
+            "businessIncome": 150000
+        },
+        "activeLoans": [
+            {
+                "type": "Business Loan",
+                "bank": "Axis",
+                "emi": 45000,
+                "outstanding": 2000000
+            }
+        ],
+        "closedLoans": [
+            {
+                "type": "Personal Loan",
+                "bank": "HDFC",
+                "status": "CLOSED",
+                "closeDate": "2022-11-30"
+            }
+        ],
+        "warnings": []
+    },
+    {
+        "customerId": "CUST008",
+        "name": "Kavita Reddy",
+        "pan": "JKLMN9012Q",
+        "score": 610,
+        "estimatedIncome": 75000,
+        "employmentType": "SALARIED",
+        "employer": "Green Energy Corp",
+        "salaryBreakdown": {
+            "basic": 40000,
+            "hra": 20000,
+            "allowances": 15000
+        },
+        "activeLoans": [
+            {
+                "type": "Personal Loan",
+                "bank": "Bajaj",
+                "emi": 18000,
+                "outstanding": 400000
+            }
+        ],
+        "closedLoans": [],
+        "warnings": [
+            "Settled Credit Card Debt in 2022",
+            "High bounce rate in savings account"
+        ]
+    },
+    {
+        "customerId": "CUST009",
+        "name": "Amit Patel",
+        "pan": "OPQRS3456R",
+        "score": 740,
+        "estimatedIncome": 55000,
+        "employmentType": "SALARIED",
+        "employer": "Diamond Textiles",
+        "salaryBreakdown": {
+            "basic": 30000,
+            "hra": 15000,
+            "allowances": 10000
+        },
+        "activeLoans": [],
+        "closedLoans": [
+            {
+                "type": "Two-Wheeler Loan",
+                "bank": "Honda",
+                "status": "CLOSED",
+                "closeDate": "2023-08-20"
+            },
+            {
+                "type": "Consumer Loan",
+                "bank": "HomeCredit",
+                "status": "CLOSED",
+                "closeDate": "2021-05-10"
+            }
+        ],
+        "warnings": []
+    },
+    {
+        "customerId": "CUST010",
+        "name": "Neha Chopra",
+        "pan": "TUVWX7890S",
+        "score": 880,
+        "estimatedIncome": 300000,
+        "employmentType": "SALARIED",
+        "employer": "FinTech Innovations",
+        "salaryBreakdown": {
+            "basic": 150000,
+            "hra": 75000,
+            "allowances": 75000
+        },
+        "activeLoans": [
+            {
+                "type": "Home Loan",
+                "bank": "HDFC",
+                "emi": 120000,
+                "outstanding": 15000000
+            },
+            {
+                "type": "Car Loan",
+                "bank": "Mercedes-Benz FS",
+                "emi": 80000,
+                "outstanding": 3500000
+            }
+        ],
+        "closedLoans": [],
+        "warnings": []
+    },
+    {
+        "customerId": "CUST011",
+        "name": "Mahesh Kumar",
+        "pan": "MAHES1234T",
+        "score": 820,
+        "estimatedIncome": 40000,
+        "employmentType": "RETIRED",
+        "employer": "Govt of India (Pension)",
+        "salaryBreakdown": {
+            "pension": 40000
+        },
+        "activeLoans": [],
+        "closedLoans": [
+            {
+                "type": "Home Loan",
+                "bank": "SBI",
+                "status": "CLOSED",
+                "closeDate": "2020-01-01"
+            }
+        ],
+        "warnings": []
+    },
+    {
+        "customerId": "GUEST",
+        "name": "Guest User",
+        "pan": "UNKNOWN",
+        "score": 700,
+        "estimatedIncome": 50000,
+        "employmentType": "UNKNOWN",
+        "employer": "N/A",
+        "salaryBreakdown": {},
+        "activeLoans": [],
+        "closedLoans": [],
+        "warnings": []
+    }
+]

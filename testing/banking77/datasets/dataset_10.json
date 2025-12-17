@@ -1,0 +1,352 @@
+[
+  {
+    "id": "10-1",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Aadhaar",
+    "follow_up": " How long will it take?"
+  },
+  {
+    "id": "10-2",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Do you give loans for vacation?",
+    "follow_up": "What is the processing fee?"
+  },
+  {
+    "id": "10-3",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Aadhaar",
+    "follow_up": "Will my account work?"
+  },
+  {
+    "id": "10-4",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "New Salary for my son",
+    "follow_up": "Do I get a debit card?"
+  },
+  {
+    "id": "10-5",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "My Travel Card is missing",
+    "follow_up": "Did any transactions go through?"
+  },
+  {
+    "id": "10-6",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Verify my Aadhaar",
+    "follow_up": "Is online upload enough?"
+  },
+  {
+    "id": "10-7",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Driving License is expired",
+    "follow_up": "Do I need to visit branch?"
+  },
+  {
+    "id": "10-8",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Someone stole my Travel Card",
+    "follow_up": "Did any transactions go through?"
+  },
+  {
+    "id": "10-9",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "I want a new Student",
+    "follow_up": "Do I get a debit card?"
+  },
+  {
+    "id": "10-10",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "My Platinum Card is missing",
+    "follow_up": "Can I still use the app?"
+  },
+  {
+    "id": "10-11",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Travel Card",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "10-12",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Payment of 10k didn't go through",
+    "follow_up": "Check my balance"
+  },
+  {
+    "id": "10-13",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Someone stole my Debit Card",
+    "follow_up": "Will my Apple Pay stop working?"
+  },
+  {
+    "id": "10-14",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Passport is expired",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "10-15",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Join with Current",
+    "follow_up": "Do I get a debit card?"
+  },
+  {
+    "id": "10-16",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for car loan",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "10-17",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Update my Aadhaar",
+    "follow_up": " How long will it take?"
+  },
+  {
+    "id": "10-18",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Update my Passport",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "10-19",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Transfer to John failed",
+    "follow_up": "Try again please"
+  },
+  {
+    "id": "10-20",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Verify my PAN Card",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "10-21",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "I lost my Visa",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "10-22",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "I need a loan for vacation",
+    "follow_up": "Is the rate fixed?"
+  },
+  {
+    "id": "10-23",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Update my Voter ID",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "10-24",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Payment of 50 bucks didn't go through",
+    "follow_up": "When will I get a refund?"
+  },
+  {
+    "id": "10-25",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "I need a loan for vacation",
+    "follow_up": "How much EMI?"
+  },
+  {
+    "id": "10-26",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Verify my Voter ID",
+    "follow_up": "Will my account work?"
+  },
+  {
+    "id": "10-27",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "Someone stole my Credit Card",
+    "follow_up": "Is there a fee?"
+  },
+  {
+    "id": "10-28",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Aadhaar",
+    "follow_up": " How long will it take?"
+  },
+  {
+    "id": "10-29",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for business loan",
+    "follow_up": "What is the processing fee?"
+  },
+  {
+    "id": "10-30",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Transfer to John failed",
+    "follow_up": "Check my balance"
+  },
+  {
+    "id": "10-31",
+    "category": "card_lost",
+    "expected_intent": "BLOCK_CARD",
+    "text": "My Platinum Card is missing",
+    "follow_up": "How long to get a new one?"
+  },
+  {
+    "id": "10-32",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in Driving License",
+    "follow_up": " How long will it take?"
+  },
+  {
+    "id": "10-33",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Verify my Voter ID",
+    "follow_up": "Will my account work?"
+  },
+  {
+    "id": "10-34",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Upload new PAN Card",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "10-35",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Money didn't reach Mom",
+    "follow_up": "Check my balance"
+  },
+  {
+    "id": "10-36",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "I need a loan for vacation",
+    "follow_up": "What are the documents needed?"
+  },
+  {
+    "id": "10-37",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Payment of 500$ didn't go through",
+    "follow_up": "Check my balance"
+  },
+  {
+    "id": "10-38",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Upload new PAN Card",
+    "follow_up": "Is online upload enough?"
+  },
+  {
+    "id": "10-39",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Update my Voter ID",
+    "follow_up": "Do I need to visit branch?"
+  },
+  {
+    "id": "10-40",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Open Current account",
+    "follow_up": "Is checkbook free?"
+  },
+  {
+    "id": "10-41",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Change address in PAN Card",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "10-42",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Interest rate for business loan?",
+    "follow_up": "What are the documents needed?"
+  },
+  {
+    "id": "10-43",
+    "category": "kyc_update",
+    "expected_intent": "VERIFICATION_AGENT",
+    "text": "Update my Passport",
+    "follow_up": "Check status"
+  },
+  {
+    "id": "10-44",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Payment of 1000 Euros didn't go through",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "10-45",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Do you give loans for vacation?",
+    "follow_up": "Can I prepay?"
+  },
+  {
+    "id": "10-46",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "Open Student account",
+    "follow_up": "What is minimum balance?"
+  },
+  {
+    "id": "10-47",
+    "category": "transfer_failed",
+    "expected_intent": "CHECK_TRANSACTION",
+    "text": "Transfer to Mom failed",
+    "follow_up": "Can you reverse it?"
+  },
+  {
+    "id": "10-48",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Do you give loans for wedding?",
+    "follow_up": "Can I prepay?"
+  },
+  {
+    "id": "10-49",
+    "category": "account_opening",
+    "expected_intent": "NEW_APPLICATION",
+    "text": "New Current for my son",
+    "follow_up": "Is checkbook free?"
+  },
+  {
+    "id": "10-50",
+    "category": "loan_application",
+    "expected_intent": "SALES_AGENT",
+    "text": "Apply for home loan",
+    "follow_up": "Is the rate fixed?"
+  }
+]

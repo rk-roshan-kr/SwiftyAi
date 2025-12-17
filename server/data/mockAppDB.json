@@ -1,0 +1,14 @@
+[
+    {
+        "userId": "user_123",
+        "name": "Swifty User",
+        "mobile": "9876543210",
+        "email": "user@swifty.ai",
+        "kycStatus": "PENDING",
+        "linkedDocuments": {},
+        "securitySettings": {
+            "twoFactor": true,
+            "biometric": false
+        }
+    }
+]

@@ -1,0 +1,100 @@
+{
+    "CUST001": {
+        "preApprovedLimit": 500000,
+        "roi": 12.0,
+        "tenureOptions": [
+            12,
+            24,
+            36,
+            48,
+            60
+        ]
+    },
+    "CUST002": {
+        "preApprovedLimit": 1000000,
+        "roi": 11.5,
+        "tenureOptions": [
+            12,
+            24,
+            36,
+            48,
+            60
+        ]
+    },
+    "CUST003": {
+        "preApprovedLimit": 200000,
+        "roi": 13.5,
+        "tenureOptions": [
+            12,
+            24,
+            36
+        ]
+    },
+    "CUST004": {
+        "preApprovedLimit": 50000,
+        "roi": 14.0,
+        "tenureOptions": [
+            12,
+            24
+        ]
+    },
+    "CUST005": {
+        "preApprovedLimit": 400000,
+        "roi": 12.5,
+        "tenureOptions": [
+            12,
+            24,
+            36,
+            48
+        ]
+    },
+    "CUST006": {
+        "preApprovedLimit": 150000,
+        "roi": 13.0,
+        "tenureOptions": [
+            12,
+            24,
+            36
+        ]
+    },
+    "CUST007": {
+        "preApprovedLimit": 800000,
+        "roi": 11.8,
+        "tenureOptions": [
+            12,
+            24,
+            36,
+            48,
+            60
+        ]
+    },
+    "CUST008": {
+        "preApprovedLimit": 0,
+        "roi": 15.0,
+        "tenureOptions": [
+            12,
+            24
+        ]
+    },
+    "CUST009": {
+        "preApprovedLimit": 300000,
+        "roi": 12.2,
+        "tenureOptions": [
+            12,
+            24,
+            36,
+            48
+        ]
+    },
+    "CUST010": {
+        "preApprovedLimit": 2500000,
+        "roi": 10.5,
+        "tenureOptions": [
+            12,
+            24,
+            36,
+            48,
+            60
+        ]
+    }
+}

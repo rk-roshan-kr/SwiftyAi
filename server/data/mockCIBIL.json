@@ -1,0 +1,184 @@
+[
+    {
+        "pan": "ABCDE1234F",
+        "score": 780,
+        "lastUpdated": "2024-12-01",
+        "paymentTimeliness": "Excellent",
+        "delays": 0,
+        "history": [
+            {
+                "type": "Credit Card",
+                "status": "Active",
+                "limit": 500000,
+                "usage": 20000
+            },
+            {
+                "type": "Personal Loan",
+                "status": "Closed",
+                "amount": 200000
+            }
+        ]
+    },
+    {
+        "pan": "FGHIJ5678K",
+        "score": 650,
+        "lastUpdated": "2024-11-15",
+        "paymentTimeliness": "Poor",
+        "delays": 2,
+        "history": [
+            {
+                "type": "Personal Loan",
+                "status": "Active",
+                "amount": 1000000,
+                "overdue": 1
+            }
+        ]
+    },
+    {
+        "pan": "KLMNO9012P",
+        "score": 850,
+        "lastUpdated": "2024-12-10",
+        "paymentTimeliness": "Excellent",
+        "delays": 0,
+        "history": [
+            {
+                "type": "Home Loan",
+                "status": "Active",
+                "amount": 5000000,
+                "emi": 45000
+            },
+            {
+                "type": "Car Loan",
+                "status": "Closed",
+                "amount": 800000
+            }
+        ]
+    },
+    {
+        "pan": "PQRST3456L",
+        "score": 550,
+        "lastUpdated": "2024-10-20",
+        "paymentTimeliness": "Very Poor",
+        "delays": 5,
+        "history": [
+            {
+                "type": "Personal Loan",
+                "status": "Written Off",
+                "amount": 150000
+            },
+            {
+                "type": "Credit Card",
+                "status": "Active",
+                "limit": 100000,
+                "usage": 98000
+            }
+        ]
+    },
+    {
+        "pan": "UVWXY7890M",
+        "score": 710,
+        "lastUpdated": "2024-12-05",
+        "paymentTimeliness": "Good",
+        "delays": 1,
+        "history": [
+            {
+                "type": "Car Loan",
+                "status": "Active",
+                "amount": 600000
+            },
+            {
+                "type": "Consumer Durable",
+                "status": "Closed",
+                "amount": 45000
+            }
+        ]
+    },
+    {
+        "pan": "ZABCD1234N",
+        "score": 300,
+        "lastUpdated": "2024-09-01",
+        "paymentTimeliness": "Defaulter",
+        "delays": 12,
+        "history": [
+            {
+                "type": "Business Loan",
+                "status": "Settled",
+                "amount": 2000000
+            },
+            {
+                "type": "Personal Loan",
+                "status": "Active",
+                "amount": 500000,
+                "overdue": 6
+            }
+        ]
+    },
+    {
+        "pan": "EFGHI5678O",
+        "score": 680,
+        "lastUpdated": "2024-11-30",
+        "paymentTimeliness": "Average",
+        "delays": 1,
+        "history": [
+            {
+                "type": "Education Loan",
+                "status": "Active",
+                "amount": 1200000
+            }
+        ]
+    },
+    {
+        "pan": "JKLMN9012Q",
+        "score": 820,
+        "lastUpdated": "2024-12-12",
+        "paymentTimeliness": "Excellent",
+        "delays": 0,
+        "history": [
+            {
+                "type": "Credit Card",
+                "status": "Active",
+                "limit": 800000,
+                "usage": 15000
+            }
+        ]
+    },
+    {
+        "pan": "OPQRS3456R",
+        "score": 600,
+        "lastUpdated": "2024-10-05",
+        "paymentTimeliness": "Below Average",
+        "delays": 3,
+        "history": [
+            {
+                "type": "Personal Loan",
+                "status": "Active",
+                "amount": 300000
+            },
+            {
+                "type": "Credit Card",
+                "status": "Active",
+                "limit": 200000,
+                "usage": 195000
+            }
+        ]
+    },
+    {
+        "pan": "TUVWX7890S",
+        "score": 740,
+        "lastUpdated": "2024-12-08",
+        "paymentTimeliness": "Good",
+        "delays": 0,
+        "history": [
+            {
+                "type": "Home Loan",
+                "status": "Active",
+                "amount": 3500000
+            },
+            {
+                "type": "Car Loan",
+                "status": "Active",
+                "amount": 500000
+            }
+        ]
+    }
+]
