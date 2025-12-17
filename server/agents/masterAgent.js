@@ -60,11 +60,40 @@ class MasterAgent extends Agent {
         return state;
     }
 
+    validateUserSession(state, userProfile) {
+        // Core Logic: If session name differs from fresh context, trust the context!
+        if (state.data.name && state.data.name !== userProfile.name) {
+            console.log(`[Master] Session Mismatch Detected! Switching ${state.data.name} -> ${userProfile.name}`);
+
+            // FULL RESET of Workflow Steps to prevent "State Leaking" from previous user
+            state.data = {
+                ...state.data,
+                ...userProfile,
+                kycStep: 'INIT',
+                underwritingStep: 'INIT',
+                negotiationStep: 'DISCOVERY',
+                negotiationStatus: 'NEGOTIATING'
+            };
+
+            // Reset Active Agent to ensure they get routed correctly as a new user
+            state.activeAgent = null;
+
+        } else {
+            // Normal update: merge fresh data
+            state.data = { ...state.data, ...userProfile };
+        }
+    }
+
     // --- 3. RUN LOOP ---
     async run(input, context) {
-        const { sessionId, mobile } = context;
+        const { sessionId, mobile, userProfile } = context;
         const state = this.getOrCreateSession(sessionId, mobile);
         state.lastActiveTime = Date.now();
+
+        // [NEW] Update Session Data with Fresh User Profile
+        if (userProfile) {
+            this.validateUserSession(state, userProfile);
+        }
 
         // Check Interrupts
         const lowerInput = (input || "").toLowerCase();
@@ -94,7 +123,7 @@ class MasterAgent extends Agent {
                 else if (targetAgentName === 'VerificationAgent') transferText = "I need to verify your identity first. 🔐";
                 else if (targetAgentName === 'SanctionAgent') transferText = "Connecting to Sanctioning Desk... 📄";
 
-                if (transferText) {
+                if (transferText && !this.isGratitude(input)) {
                     newMessagesBatch.push({
                         sender: 'bot',
                         text: transferText,
@@ -211,6 +240,10 @@ class MasterAgent extends Agent {
 
         // 3. Default
         return 'SalesAgent';
+    }
+    isGratitude(text) {
+        const lower = (text || "").toLowerCase();
+        return lower.includes('thank') || lower.includes('bye') || lower.includes('ok ') || lower === 'ok';
     }
 }
 

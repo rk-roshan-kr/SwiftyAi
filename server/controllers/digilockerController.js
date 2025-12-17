@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const User = require('../models/User');
 
 const DB_PATH = path.join(__dirname, '../data/mockDigiLocker.json');
 
@@ -70,36 +71,30 @@ const getDocuments = (req, res) => {
     const user = db.users.find(u => u.username === username);
 
     if (user) {
-        // Simulate delay & Sync to App DB
-        setTimeout(() => {
+        // [FIX] Sync Directly to MongoDB (No more file-based "App DB")
+        // This ensures Agent logic (which reads Mongo) sees the update immediately.
+
+        // Using Promise to keep the delay simulation if desired, or just making it cleaner
+        setTimeout(async () => {
             try {
-                // Read App DB
-                const appDBData = fs.readFileSync(APP_DB_PATH, 'utf8');
-                const appDB = JSON.parse(appDBData);
+                await User.findOneAndUpdate(
+                    { mobile: user.mobile },
+                    {
+                        $set: {
+                            name: user.name, // SYNC NAME
+                            kycStatus: "VERIFIED",
+                            digilockerId: user.username,
+                            "linkedDocuments.pan": user.documents.pan,
+                            "linkedDocuments.aadhaar": user.documents.aadhaar
+                        }
+                    },
+                    { upsert: true, new: true }
+                );
 
-                // Find or Create User in App DB (Mock: assuming single user or matching name)
-                const appUserIndex = appDB.findIndex(u => u.name === user.name);
-
-                if (appUserIndex !== -1) {
-                    appDB[appUserIndex].linkedDocuments = user.documents;
-                    appDB[appUserIndex].kycStatus = "VERIFIED";
-                    appDB[appUserIndex].digilockerId = user.username;
-                } else {
-                    appDB.push({
-                        userId: `user_${Date.now()}`,
-                        name: user.name,
-                        kycStatus: "VERIFIED",
-                        linkedDocuments: user.documents,
-                        digilockerId: user.username
-                    });
-                }
-
-                // Write Sync
-                fs.writeFileSync(APP_DB_PATH, JSON.stringify(appDB, null, 2));
-                console.log(`[Backend] Synced DigiLocker data for ${user.name} to App DB.`);
+                console.log(`[Backend] Synced DigiLocker data for ${user.name} to MongoDB.`);
 
             } catch (err) {
-                console.error("Error syncing to App DB:", err);
+                console.error("Error syncing to MongoDB:", err);
             }
 
             res.json({
@@ -117,4 +112,4 @@ const getDocuments = (req, res) => {
     }
 };
 
-module.exports = { login, verifyOTP, getDocuments };
+module.exports = { login, verifyOTP, getDocuments }

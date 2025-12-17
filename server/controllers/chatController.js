@@ -66,6 +66,8 @@ const deleteChat = async (req, res) => {
 };
 
 // [FIXED] Send Message - No DB Saving Here!
+const User = require('../models/User'); // Import User Model
+
 const sendMessage = async (req, res) => {
     try {
         const { sessionId, message, mobile } = req.body;
@@ -74,10 +76,30 @@ const sendMessage = async (req, res) => {
             return res.status(400).json({ success: false, message: "Missing data" });
         }
 
-        // 1. Prepare Context
-        const context = { sessionId, mobile, message };
+        // 1. Fetch User Profile for Context
+        let userProfile = null;
+        if (mobile) {
+            const user = await User.findOne({ mobile });
+            if (user) {
+                userProfile = {
+                    name: user.name || "Valued Customer",
+                    digilockerLinked: !!(user.linkedDocuments?.pan?.idNumber), // Check if PAN exists
+                    bankLinked: !!(user.accountDetails?.accountId), // Check if Account ID exists
+                    pan: user.linkedDocuments?.pan?.idNumber,
+                    aadhaar: user.linkedDocuments?.aadhaar?.idNumber || "Not Linked"
+                };
+            }
+        }
 
-        // 2. Run Agent System
+        // 2. Prepare Context
+        const context = {
+            sessionId,
+            mobile,
+            message,
+            userProfile // Inject Profile Data
+        };
+
+        // 3. Run Agent System
         // (MasterAgent inside run() handles ALL MongoDB saving now)
         const result = await MasterAgent.run(message, context);
 
@@ -90,7 +112,7 @@ const sendMessage = async (req, res) => {
             parsedOutput: result
         });
 
-        // 3. Send Response
+        // 4. Send Response
         // We pass 'messages' array for the UI to render bubbles.
         // We set 'response' to null to prevent the frontend from rendering a "Ghost Bubble" via legacy fallback.
         if (result.messages && Array.isArray(result.messages)) {

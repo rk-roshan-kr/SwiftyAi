@@ -65,8 +65,13 @@ class UnderwritingAgent extends Agent {
 
             if (salaryMatch) {
                 let salary = parseFloat(salaryMatch[1]);
-                if (lowerInput.includes('k')) salary *= 1000;
-                if (lowerInput.includes('l')) salary *= 100000;
+
+                // [FIX] Exclusive Scaling prevents 40L -> 400Cr bug
+                if (lowerInput.includes('l') || lowerInput.includes('lakh')) {
+                    salary *= 100000;
+                } else if (lowerInput.includes('k')) {
+                    salary *= 1000;
+                }
 
                 // LOGIC: DTI Check
                 // Estimate EMI ~ 2% of Loan Amount (Mock)

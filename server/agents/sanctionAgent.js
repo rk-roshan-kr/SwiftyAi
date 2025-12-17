@@ -6,6 +6,11 @@ class SanctionAgent extends Agent {
         super("SanctionAgent", "Confirms terms and generates letter.", []);
     }
 
+    formatCurrency(num) {
+        if (!num || isNaN(num)) return "Unknown";
+        return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(num);
+    }
+
     async run(input, context) {
         const step = context.sanctionStep || 'INIT';
         const lowerInput = (input || "").toLowerCase();
@@ -70,9 +75,17 @@ class SanctionAgent extends Agent {
 
         // Just ensure this block handles the save before returning the standard response
         return {
-            response: "The letter is ready. Download it or say **'I accept'** to finish.",
+            response: "The letter is ready. Download it or say **'I accept'** to finish. ||WIDGET:SANCTION_LETTER||",
             status: "AWAITING_INPUT",
-            data: { sanctionStep: 'LETTER_ISSUED' }
+            data: {
+                sanctionStep: 'LETTER_ISSUED',
+                sanctionDetails: {
+                    amount: this.formatCurrency(amount),
+                    rate: rate,
+                    name: context.name || "Valued Customer",
+                    date: new Date().toLocaleDateString()
+                }
+            }
         };
     }
 }

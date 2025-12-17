@@ -4,7 +4,7 @@
     "description": "Mock Backend for Swifty AI",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js"
+        "start": "npx kill-port 5000 && node server.js"
     },
     "dependencies": {
         "axios": "^1.13.2",

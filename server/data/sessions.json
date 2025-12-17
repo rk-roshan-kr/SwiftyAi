@@ -988,5 +988,364 @@
       "sanctionStep": "LETTER_ISSUED"
     },
     "history": []
+  },
+  "1765983666672": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765983767383,
+    "data": {
+      "mobile": "1010101010",
+      "productType": "PERSONAL",
+      "requestedAmount": 600000,
+      "currentOfferedRate": 12,
+      "requestedTenure": 48,
+      "collateral": null,
+      "agreedRate": null,
+      "applicationId": "PL-868741",
+      "negotiationRounds": 0,
+      "floorHitCount": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "kycStep": "AWAITING_DOCS"
+    },
+    "history": []
+  },
+  "1765984291455": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765984427115,
+    "data": {
+      "mobile": "1010101010",
+      "productType": "PERSONAL",
+      "requestedAmount": 5000000,
+      "currentOfferedRate": 12,
+      "requestedTenure": 120,
+      "collateral": null,
+      "agreedRate": 12,
+      "applicationId": "PL-569231",
+      "negotiationRounds": 0,
+      "floorHitCount": 0,
+      "negotiationStatus": "LOCKED",
+      "negotiationStep": "LOCKING",
+      "kycStep": "AWAITING_DOCS"
+    },
+    "history": []
+  },
+  "1765984636443": {
+    "activeAgent": "SanctionAgent",
+    "lastActiveTime": 1765985065062,
+    "data": {
+      "mobile": "1010101010",
+      "productType": "PERSONAL",
+      "requestedAmount": 540000,
+      "currentOfferedRate": 10.5,
+      "requestedTenure": 40,
+      "collateral": null,
+      "agreedRate": 10.5,
+      "applicationId": "PL-526559",
+      "negotiationRounds": 1,
+      "floorHitCount": 0,
+      "negotiationStatus": "LOCKED",
+      "negotiationStep": "LOCKING",
+      "kycStep": "COMPLETED",
+      "digiLockerLinked": true,
+      "userName": "Mahesh Kumar",
+      "bankLinked": true,
+      "underwritingStep": "COMPLETED",
+      "verifiedIncome": 4000000000,
+      "sanctionStep": "LETTER_ISSUED"
+    },
+    "history": []
+  },
+  "1765985615217": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765986182348,
+    "data": {
+      "mobile": "1010101010",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "aadhaar": "Not Linked",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "requestedTenure": 48,
+      "collateral": null,
+      "agreedRate": null,
+      "applicationId": "PL-215964",
+      "negotiationRounds": 0,
+      "floorHitCount": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationStep": "DISCOVERY",
+      "kycStep": "COMPLETED",
+      "underwritingStep": "COMPLETED",
+      "verifiedIncome": 49000,
+      "sanctionStep": "COMPLETED",
+      "loanBooked": true
+    },
+    "history": []
+  },
+  "1765986185876": {
+    "activeAgent": null,
+    "lastActiveTime": 1765986576327,
+    "data": {
+      "mobile": "1010101010",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "aadhaar": "Not Linked",
+      "productType": "PERSONAL",
+      "requestedAmount": 50000,
+      "currentOfferedRate": 10.75,
+      "requestedTenure": 36,
+      "collateral": null,
+      "agreedRate": 10.75,
+      "applicationId": "PL-738109",
+      "negotiationRounds": 2,
+      "floorHitCount": 0,
+      "negotiationStatus": "LOCKED",
+      "negotiationStep": "LOCKING",
+      "kycStep": "COMPLETED",
+      "underwritingStep": "COMPLETED",
+      "verifiedIncome": 49000,
+      "sanctionStep": "COMPLETED",
+      "loanBooked": true
+    },
+    "history": []
+  },
+  "1765987083287": {
+    "activeAgent": "SupportAgent",
+    "lastActiveTime": 1765987203617,
+    "data": {
+      "mobile": "9999999999",
+      "productType": "CAR",
+      "requestedAmount": null,
+      "currentOfferedRate": 9.5,
+      "requestedTenure": 60,
+      "collateral": null,
+      "agreedRate": null,
+      "applicationId": "VL-470616",
+      "negotiationRounds": 0,
+      "floorHitCount": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationStep": "DISCOVERY",
+      "supportStep": "INIT"
+    },
+    "history": []
+  },
+  "1765987229600": {
+    "activeAgent": "InvestmentAgent",
+    "lastActiveTime": 1765989605912,
+    "data": {
+      "mobile": "1010101010",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "aadhaar": "Not Linked",
+      "productType": "FD",
+      "invAmount": null,
+      "invTenure": 120,
+      "invGoal": "Wealth Creation",
+      "invStep": "LOCKED"
+    },
+    "history": []
+  },
+  "1765987398871": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765989721784,
+    "data": {
+      "mobile": "1010101010",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "aadhaar": "Not Linked",
+      "productType": "CAR",
+      "requestedAmount": 1500000,
+      "currentOfferedRate": 9.5,
+      "requestedTenure": 60,
+      "collateral": null,
+      "agreedRate": null,
+      "applicationId": "VL-439131",
+      "negotiationRounds": 0,
+      "floorHitCount": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationStep": "QUOTE"
+    },
+    "history": []
+  },
+  "1765987494377": {
+    "activeAgent": "VerificationAgent",
+    "lastActiveTime": 1765989549127,
+    "data": {
+      "mobile": "1010101010",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "pan": "ABCDE1234F",
+      "aadhaar": "123456789012",
+      "kycStep": "CHECK_BANK"
+    },
+    "history": []
+  },
+  "1765987560092": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765987561852,
+    "data": {
+      "mobile": "1111111111",
+      "productType": "CAR",
+      "requestedAmount": null,
+      "currentOfferedRate": 9.5,
+      "requestedTenure": 60,
+      "collateral": null,
+      "agreedRate": null,
+      "applicationId": "VL-437944",
+      "negotiationRounds": 0,
+      "floorHitCount": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationStep": "DISCOVERY"
+    },
+    "history": []
+  },
+  "1765990130523": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765990148629,
+    "data": {
+      "mobile": "9876543210",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "aadhaar": "Not Linked",
+      "productType": "PERSONAL",
+      "requestedAmount": null,
+      "currentOfferedRate": 12,
+      "requestedTenure": 48,
+      "collateral": null,
+      "agreedRate": null,
+      "applicationId": "PL-191885",
+      "negotiationRounds": 0,
+      "floorHitCount": 0,
+      "negotiationStatus": "NEGOTIATING",
+      "negotiationStep": "DISCOVERY"
+    },
+    "history": []
+  },
+  "1765990300498": {
+    "activeAgent": null,
+    "lastActiveTime": 1765990789181,
+    "data": {
+      "mobile": "9876543210",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "aadhaar": "Not Linked",
+      "productType": "PERSONAL",
+      "requestedAmount": 50000,
+      "currentOfferedRate": 10.5,
+      "requestedTenure": 84,
+      "collateral": null,
+      "agreedRate": 10.5,
+      "applicationId": "PL-985461",
+      "negotiationRounds": 2,
+      "floorHitCount": 0,
+      "negotiationStatus": "LOCKED",
+      "negotiationStep": "LOCKING",
+      "kycStep": "COMPLETED",
+      "underwritingStep": "COMPLETED",
+      "verifiedIncome": 40000,
+      "sanctionStep": "COMPLETED",
+      "sanctionDetails": {
+        "amount": "₹50,000",
+        "rate": 10.5,
+        "name": "Valued Customer",
+        "date": "17/12/2025"
+      },
+      "loanBooked": true
+    },
+    "history": []
+  },
+  "1765990901651": {
+    "activeAgent": "UnderwritingAgent",
+    "lastActiveTime": 1765991238282,
+    "data": {
+      "mobile": "9876543210",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": true,
+      "aadhaar": "Not Linked",
+      "productType": "CAR",
+      "requestedAmount": 400000,
+      "currentOfferedRate": 8.5,
+      "requestedTenure": 84,
+      "collateral": "its maruti suzuki ",
+      "agreedRate": 8.5,
+      "applicationId": "VL-786577",
+      "negotiationRounds": 1,
+      "floorHitCount": 0,
+      "negotiationStatus": "LOCKED",
+      "negotiationStep": "LOCKING",
+      "kycStep": "COMPLETED",
+      "underwritingStep": "WAITING_CONSENT"
+    },
+    "history": []
+  },
+  "1765991399243": {
+    "activeAgent": "SalesAgent",
+    "lastActiveTime": 1765991779639,
+    "data": {
+      "mobile": "9876543210",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "aadhaar": "Not Linked",
+      "productType": "PERSONAL",
+      "requestedAmount": 300000,
+      "currentOfferedRate": 10.5,
+      "requestedTenure": 84,
+      "collateral": null,
+      "agreedRate": 10.5,
+      "applicationId": "PL-693027",
+      "negotiationRounds": 3,
+      "floorHitCount": 1,
+      "negotiationStatus": "COMPLETED",
+      "negotiationStep": "LOCKING",
+      "kycStep": "COMPLETED",
+      "underwritingStep": "COMPLETED",
+      "verifiedIncome": 40000,
+      "sanctionStep": "COMPLETED",
+      "sanctionDetails": {
+        "amount": "₹3,00,000",
+        "rate": 10.5,
+        "name": "Valued Customer",
+        "date": "17/12/2025"
+      },
+      "loanBooked": true
+    },
+    "history": []
+  },
+  "1765991806569": {
+    "activeAgent": "SupportAgent",
+    "lastActiveTime": 1765991822711,
+    "data": {
+      "mobile": "9876543210",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "aadhaar": "Not Linked",
+      "supportStep": "INIT"
+    },
+    "history": []
+  },
+  "1765991831343": {
+    "activeAgent": "InvestmentAgent",
+    "lastActiveTime": 1765991866383,
+    "data": {
+      "mobile": "9876543210",
+      "name": "Valued Customer",
+      "digilockerLinked": false,
+      "bankLinked": false,
+      "aadhaar": "Not Linked",
+      "productType": "FD",
+      "invAmount": 3000,
+      "invTenure": null,
+      "invGoal": null,
+      "invStep": "DISCOVERY"
+    },
+    "history": []
   }
 }

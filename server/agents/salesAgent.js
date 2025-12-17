@@ -96,7 +96,8 @@ class SalesAgent extends Agent {
         const extracted = {
             intent: null, amount: null, targetRate: null,
             mathLogic: null, targetEMI: null, tenure: null,
-            askTotalInterest: false, currencyError: false
+            askTotalInterest: false, currencyError: false,
+            confirmed: false // [NEW] Track explicit confirmation
         };
 
         // A. Intent
@@ -114,6 +115,11 @@ class SalesAgent extends Agent {
         const rateMatch = lower.match(/(\d+(\.\d+)?)%/);
         if (rateMatch && (lower.includes('interest') || lower.includes('rate'))) {
             extracted.targetRate = parseFloat(rateMatch[1]);
+        }
+        // Fallback: simple X% match if not caught above
+        if (!extracted.targetRate) {
+            const simpleRate = lower.match(/(\d+(\.\d+)?)%/);
+            if (simpleRate) extracted.targetRate = parseFloat(simpleRate[1]);
         }
 
         // D. Target EMI
@@ -146,7 +152,12 @@ class SalesAgent extends Agent {
             extracted.askTotalInterest = true;
         }
 
-        // G. Standard Amount (Enhanced Regex)
+        // G. Confirmation Detection [NEW]
+        if (lower.match(/\b(yes|ok|okay|sure|proceed|deal|lock|sign|submit|agree)\b/)) {
+            extracted.confirmed = true;
+        }
+
+        // H. Standard Amount (Enhanced Regex)
         if (!extracted.amount && !extracted.targetEMI) {
             // Regex handles: 5L, 5 Lakh, 5 Cr, 50000, 50k, 50 Rupees, Rs 50000
             const numRegex = /(?<![\w-])(\d+(\.\d+)?)\s*(k|l|lakh|cr|crore|rs|rupees)/gi;
@@ -189,7 +200,7 @@ class SalesAgent extends Agent {
         }
 
         // B. Closing
-        if (lowerInput.includes('thank') || lowerInput.includes('bye') || lowerInput.includes('done')) {
+        if (lowerInput.includes('thank') || lowerInput.includes('bye')) {
             return {
                 response: "You're welcome! Ref ID: " + (context.applicationId || "N/A"),
                 status: "COMPLETED", data: { negotiationStatus: 'COMPLETED' }
@@ -206,12 +217,15 @@ class SalesAgent extends Agent {
             amount: context.requestedAmount || null,
             rate: context.currentOfferedRate || null,
             tenure: context.requestedTenure || null,
-            collateral: context.collateral || null, // [NEW] Track Collateral
+            collateral: context.collateral || null,
             appId: context.applicationId || null,
             rounds: context.negotiationRounds || 0,
             floorHitCount: context.floorHitCount || 0,
-            status: context.negotiationStatus || 'NEGOTIATING'
+            status: context.negotiationStatus || 'NEGOTIATING',
+            step: context.negotiationStep || 'DISCOVERY'
         };
+
+        const prodConfig = PRODUCT_CONFIG[state.product];
 
         // Fresh Start Logic
         if ((nlu.intent && nlu.intent !== context.productType) || !state.appId || state.status === 'COMPLETED') {
@@ -219,16 +233,23 @@ class SalesAgent extends Agent {
             // Use generating ID logic
             state.appId = this.generateAppId(state.product);
 
-            const prodConfig = PRODUCT_CONFIG[state.product];
-            state.rate = prodConfig.listRate;
-            state.tenure = prodConfig.defaultTenure;
-            state.amount = nlu.amount || null;
-            state.collateral = null; // Reset collateral
+            // Re-fetch config based on possibly new product
+            const newConfig = PRODUCT_CONFIG[state.product];
+            state.rate = newConfig.listRate;
+            state.tenure = newConfig.defaultTenure;
+            state.amount = nlu.amount || null; // Capture amount immediately if provided
+            state.collateral = null;
             state.status = 'NEGOTIATING';
+            state.step = state.amount ? 'QUOTE' : 'DISCOVERY'; // Jump to QUOTE if amount present
             state.rounds = 0;
             state.floorHitCount = 0;
         } else {
-            if (nlu.amount) state.amount = nlu.amount;
+            // Update context
+            if (nlu.amount) {
+                state.amount = nlu.amount;
+                // If we get a new amount in QUOTE or LOCKING, we might need to re-quote
+                state.step = 'QUOTE';
+            }
             if (nlu.tenure) state.tenure = nlu.tenure;
         }
 
@@ -239,123 +260,151 @@ class SalesAgent extends Agent {
         const floorRate = config.minRate;
 
         // --- 3. BOUNDARY CHECKS ---
+        let clampMessage = "";
         if (state.amount) {
-            if (state.amount < config.minAmount) state.amount = config.minAmount;
-            if (state.amount > config.maxAmount) state.amount = config.maxAmount;
+            if (state.amount < config.minAmount) {
+                state.amount = config.minAmount;
+                clampMessage = `Min amount is ${this.formatCurrency(config.minAmount)}`;
+            }
+            if (state.amount > config.maxAmount) {
+                state.amount = config.maxAmount;
+                clampMessage = `Max amount is ${this.formatCurrency(config.maxAmount)}`;
+            }
         }
 
-        // --- 4. TACTICS & LOGIC ---
+        // --- 4. MULTI-STAGE LATCH LOGIC ---
         let negotiationTactic = "standard";
         let salesInstruction = "";
 
-        // FINANCIALS
-        const loanMath = this.calculateLoanSummary(state.amount, state.rate, state.tenure);
-        const years = Math.round(state.tenure / 12 * 10) / 10;
-
-        // SCENARIO: DISCOVERY (Amount Missing)
-        if (!state.amount) {
-            negotiationTactic = "discovery";
-            salesInstruction = `New App ${state.appId}. Ask "How much funds do you require?"`;
+        // --- STEP SWITCH LOGIC ---
+        // If in LOCKING but user is resisting (new rate, not confirmed), fall back to QUOTE
+        // This ensures the resistance block below processes the input in the same turn
+        if (state.step === 'LOCKING') {
+            if (nlu.targetRate || lowerInput.match(/(\d+)%/) || lowerInput.includes('lower')) {
+                state.step = 'QUOTE';
+            }
         }
-        // SCENARIO: COLLATERAL CHECK (New Feature)
-        else if (config.requiresCollateral && !state.collateral) {
-            // Check if user provided it in this turn
-            if (input.length > 3 && !nlu.amount && !nlu.intent) {
-                // Simple Heuristic: If we asked for collateral and they typed something non-numeric, assume it is collateral
-                // Ideally we'd use NLU, but this is a rough latch
-                state.collateral = input;
-                // Re-evaluate logic immediately (recursive-ish) or just proceed to offer in next turn
-                // For now, let's fall through to offer if we captured it, OR ask if we didn't (which we won't know until next turn effectively unless we do it here)
-                // Let's assume we accepted it and move to offer
-                negotiationTactic = "standard"; // Proceed to offer
-                salesInstruction = `Collateral '${state.collateral}' noted. Offer: ${this.formatCurrency(state.amount)} at ${state.rate}%. Ask to proceed.`;
+
+        // --- STEP 1: DISCOVERY ---
+        if (state.step === 'DISCOVERY') {
+            if (!state.amount) {
+                salesInstruction = `New App ${state.appId}. Ask usage of funds & "How much funds do you require?"`;
             } else {
-                negotiationTactic = "request_collateral";
-                const assetType = state.product === 'CAR' ? "car model" : "property location";
-                salesInstruction = `Acknowledge amount ${this.formatCurrency(state.amount)}. Ask: "Which ${assetType} are you purchasing?"`;
+                state.step = 'QUOTE'; // Auto-advance
             }
         }
-        // SCENARIO: TOTAL INTEREST QUESTION
-        else if (nlu.askTotalInterest) {
-            negotiationTactic = "math_explanation";
-            salesInstruction = `User asked interest. State: "For ${this.formatCurrency(state.amount)} @ ${state.rate}% (${years} yrs): Monthly EMI: ${this.formatCurrency(loanMath.emi)}, Total Interest: ${this.formatCurrency(loanMath.totalInterest)}". Ask to proceed.`;
-        }
-        // SCENARIO: ACTIVE NEGOTIATION
-        else if (state.status !== 'LOCKED') {
-            const isResistance = nlu.targetRate || lowerInput.includes('lower') || lowerInput.includes('expensive');
 
-            if (isResistance) {
-                if (state.status === 'OFFER_ACCEPTED') state.status = 'NEGOTIATING';
-                state.rounds++;
+        // --- STEP 2: QUOTE (Negotiation Loop) ---
+        // Note: We use 'if' here (not else if) so a fall-through from DISCOVERY/LOCKING works immediately
+        if (state.step === 'QUOTE') {
+            // COLLATERAL CHECK
+            if (config.requiresCollateral && !state.collateral) {
+                // If user typed string (not rate/amount), assume collateral
+                if (input.length > 3 && !nlu.amount && !nlu.targetRate && !nlu.confirmed) {
+                    state.collateral = input;
+                } else {
+                    negotiationTactic = "request_collateral";
+                    const assetType = state.product === 'CAR' ? "car model" : "property location";
+                    salesInstruction = `Acknowledge amount ${this.formatCurrency(state.amount)}. Ask: "Which ${assetType} are you purchasing?"`;
+                }
+            }
 
-                if (nlu.targetRate) {
-                    if (nlu.targetRate >= floorRate) {
-                        state.rate = nlu.targetRate;
-                        negotiationTactic = "accept_target";
+            // If we have collateral (or don't need it), proceed to Price Negotiation
+            if (!salesInstruction) {
+                const isResistance = nlu.targetRate || lowerInput.includes('lower') || lowerInput.includes('expensive');
+
+                if (isResistance) {
+                    state.rounds++;
+                    if (nlu.targetRate) {
+                        if (nlu.targetRate >= floorRate) {
+                            state.rate = nlu.targetRate;
+                            negotiationTactic = "accept_target";
+                        } else {
+                            state.rate = floorRate;
+                            state.floorHitCount++;
+                            negotiationTactic = "hard_floor";
+                        }
                     } else {
-                        state.rate = floorRate;
-                        state.floorHitCount++;
-                        negotiationTactic = "hard_floor";
+                        const step = (state.rate - floorRate > 1.0) ? 0.5 : 0.25;
+                        const newRate = Math.max(floorRate, state.rate - step);
+                        state.rate = newRate;
+                        negotiationTactic = (newRate <= floorRate) ? "hard_floor" : "step_down";
                     }
-                } else {
-                    const step = (state.rate - floorRate > 1.0) ? 0.5 : 0.25;
-                    const newRate = Math.max(floorRate, state.rate - step);
-                    state.rate = newRate;
-                    negotiationTactic = (newRate <= floorRate) ? "hard_floor" : "step_down";
                 }
-            }
-            // Strict Locking
-            else if (lowerInput.match(/\b(deal|lock|documentation|sign|submit)\b/)) {
-                state.status = 'LOCKED';
-                negotiationTactic = "closing";
-            }
-            // Agreement
-            else if (lowerInput.match(/\b(yes|ok|okay|sure|proceed)\b/)) {
-                if (state.status !== 'OFFER_ACCEPTED') {
-                    state.status = 'OFFER_ACCEPTED';
-                    negotiationTactic = "ask_confirmation";
-                } else {
-                    state.status = 'LOCKED';
-                    negotiationTactic = "closing";
+
+                // USER SIGNALS MOVING FORWARD
+                if (nlu.confirmed || lowerInput.includes('proceed') || lowerInput.includes('lock')) {
+                    // Check if this was a resistance turn (e.g. "10%"). If so, don't lock immediately unless they said "Yes 10%".
+                    if (nlu.targetRate && nlu.confirmed) {
+                        state.step = 'LOCKING';
+                        negotiationTactic = 'ask_confirmation';
+                    } else if (!isResistance) {
+                        // Only lock if we aren't currently fighting over rate
+                        state.step = 'LOCKING';
+                        negotiationTactic = 'ask_confirmation';
+                    }
                 }
-            }
-            else {
-                // Default Offer
-                salesInstruction = `Offer: ${this.formatCurrency(state.amount)} at ${state.rate}% for ${years} years. EMI: ${this.formatCurrency(loanMath.emi)}. Ask if this fits.`;
+
+                if (state.step === 'QUOTE' && !salesInstruction) {
+                    // Standard Offer Presentation
+                    const prefix = clampMessage ? `(${clampMessage}) ` : "";
+                    const loanMath = this.calculateLoanSummary(state.amount, state.rate, state.tenure);
+                    salesInstruction = `${prefix}Offer: ${this.formatCurrency(state.amount)} at ${state.rate}% for ${Math.round(state.tenure / 12 * 10) / 10} years. EMI: ${this.formatCurrency(loanMath.emi)}. Ask if this fits.`;
+                }
             }
         }
-        else if (state.status === 'LOCKED') {
-            salesInstruction = `Deal locked. Transferring...`;
+
+        // --- STEP 3: LOCKING (Explicit Confirmation) ---
+        if (state.step === 'LOCKING') {
+            // Calculate final math
+            const loanMath = this.calculateLoanSummary(state.amount, state.rate, state.tenure);
+            const years = Math.round(state.tenure / 12 * 10) / 10;
+
+            // If user just got moved here, we need to ask for confirmation
+            if (negotiationTactic === 'ask_confirmation') {
+                // Soften "Locked" to "Drafted offer"
+                salesInstruction = `Say: "Excellent! I have drafted an offer: ${state.rate}% for ${this.formatCurrency(state.amount)} (${years} yrs, EMI: ${this.formatCurrency(loanMath.emi)}). Shall we proceed to documentation?"`;
+            } else {
+                // User is replying to the "Documentation?" question
+                if (nlu.confirmed) {
+                    state.status = 'LOCKED'; // Internal status
+                    negotiationTactic = "closing";
+                } else {
+                    // User hesitated? Back to QUOTE
+                    state.step = 'QUOTE';
+                    salesInstruction = `Understood. What part of the offer would you like to change? Rate is ${state.rate}%.`;
+                }
+            }
         }
 
         // --- 5. PROMPT GENERATION ---
-        if (!salesInstruction) {
-            const emi = this.formatCurrency(loanMath.emi);
+        const loanMath = this.calculateLoanSummary(state.amount, state.rate, state.tenure);
+        const years = Math.round(state.tenure / 12 * 10) / 10;
+        const emi = this.formatCurrency(loanMath.emi);
 
+        if (!salesInstruction) {
             if (negotiationTactic === "accept_target")
-                salesInstruction = `Agreed. Matching ${state.rate}% for ${years} years. EMI: ${emi}. Lock?`;
+                salesInstruction = `Agreed. Deal: ${state.rate}% for ${years} years. EMI: ${emi}. Shall we proceed?`;
             else if (negotiationTactic === "step_down")
-                salesInstruction = `Special rate: ${state.rate}% for ${years} years. EMI: ${emi}. Better?`;
+                salesInstruction = `Counter-offer: ${state.rate}% for ${years} years. EMI: ${emi}. Is this acceptable?`;
             else if (negotiationTactic === "hard_floor")
-                salesInstruction = `${state.rate}% is floor. EMI: ${emi}. Proceed?`;
-            else if (negotiationTactic === "ask_confirmation")
-                salesInstruction = `Say: "Excellent! Locked ${state.rate}% for ${this.formatCurrency(state.amount)} (${years} yrs, EMI: ${emi}). Documentation?"`;
+                salesInstruction = `Best I can do is ${state.rate}%. EMI: ${emi}. Do we have a deal?`;
             else if (negotiationTactic === "closing")
                 salesInstruction = `Say: "Perfect. Initiating verification for App ID ${state.appId}..."`;
         }
 
         const systemPrompt = `
-        ROLE: Loan Officer
-        DATA: Rate=${state.rate}%, Tenure=${years} yrs, EMI=${this.formatCurrency(loanMath.emi)}, Collateral=${state.collateral || 'N/A'}
-        INSTRUCTION: ${salesInstruction}
+        You are a helpful Loan Officer at Swifty AI.
+        CONTEXT: Step=${state.step}, Rate=${state.rate}%, Tenure=${years} yrs, EMI=${emi}, Collateral=${state.collateral || 'N/A'}
+        
+        YOUR GOAL:
+        ${salesInstruction}
 
-        RULES:
-        1. Concise.
+        GUIDELINES:
+        1. Keep response concise and natural.
         2. ${negotiationTactic === 'request_collateral' ? 'Ask for collateral details.' : 'Mention Tenure.'}
-        3. If "ask_confirmation", end with "Shall we get down to documentation?".
-        4. OUTPUT VALID JSON ONLY.
-
-        OUTPUT: { "response": "text", "status": "NEGOTIATING" | "AMOUNT_AGREED" }
+        3. If instruction says "Drafted offer", end with "Shall we get down to documentation?".
+        4. OUPUT RAW JSON: { "response": "text", "status": "NEGOTIATING" | "AMOUNT_AGREED" }
         `;
 
         let result = await this.callLLM([
@@ -372,18 +421,18 @@ class SalesAgent extends Agent {
             if (firstBrace !== -1 && lastBrace !== -1) {
                 parsed = JSON.parse(clean.substring(firstBrace, lastBrace + 1));
             } else {
-                if (clean.includes("ROLE:") || clean.includes("INSTRUCTION:")) {
-                    parsed.response = "Offer updated. Proceed?";
-                } else {
-                    parsed.response = clean;
-                }
+                parsed.response = clean;
             }
         } catch (e) {
             parsed.response = "Offer updated. Proceed?";
         }
 
-        if (state.status === 'LOCKED') parsed.status = 'AMOUNT_AGREED';
-        if (state.status === 'OFFER_ACCEPTED') parsed.status = "NEGOTIATING";
+        // FORCE OVERRIDE STATUS BASED ON LOGIC GUARD
+        if (state.status === 'LOCKED') {
+            parsed.status = 'AMOUNT_AGREED';
+        } else {
+            parsed.status = 'NEGOTIATING'; // Prevent LLM hallucinations
+        }
 
         // Filter Tagging
         if (!parsed.response.includes("||FILTER") && state.amount && state.status !== 'LOCKED') {
@@ -398,12 +447,13 @@ class SalesAgent extends Agent {
                 requestedAmount: state.amount,
                 currentOfferedRate: state.rate,
                 requestedTenure: state.tenure,
-                collateral: state.collateral, // [NEW] Pass Collateral
+                collateral: state.collateral,
                 agreedRate: state.status === 'LOCKED' ? state.rate : null,
                 applicationId: state.appId,
                 negotiationRounds: state.rounds,
                 floorHitCount: state.floorHitCount,
-                negotiationStatus: state.status
+                negotiationStatus: state.status,
+                negotiationStep: state.step
             }
         };
     }
